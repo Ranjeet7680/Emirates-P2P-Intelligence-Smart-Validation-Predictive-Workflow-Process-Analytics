@@ -7,6 +7,7 @@
 <br/><br/>
 
 [![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
+[![GitHub Wiki](https://img.shields.io/badge/GitHub_Wiki-36+_Diagrams_&_Charts-8A2BE2?style=for-the-badge&logo=gitbook&logoColor=white)](https://github.com/Ranjeet7680/Emirates-P2P-Intelligence-Smart-Validation-Predictive-Workflow-Process-Analytics/wiki)
 [![FastAPI Backend](https://img.shields.io/badge/FastAPI-0.111.0-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![React 19 Frontend](https://img.shields.io/badge/React-19.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
 [![Process Mining Benchmark](https://img.shields.io/badge/Benchmark-BPI%20Challenge%202019-D71921?style=for-the-badge&logo=apache-spark&logoColor=white)](https://data.4tu.nl/articles/dataset/BPI_Challenge_2019/12715853)
@@ -16,7 +17,7 @@
 
 **Enterprise-Grade Procure-to-Pay (P2P) Process Mining, Autonomous 3-Way Verification & Predictive Bottleneck Intelligence for Emirates Airline & Group Supply Chain Operations**
 
-[Live Interactive Demo](#-quickstart-guide) • [Architecture Blueprint](#-architectural-overview) • [Process Mining Flow](#-end-to-end-process-mining-lifecycle) • [3-Way Matching Engine](#-autonomous-3-way-smart-matching) • [Vercel Deployment Guide](#-vercel-deployment-guide)
+[📖 Technical Wiki (36+ Diagrams)](https://github.com/Ranjeet7680/Emirates-P2P-Intelligence-Smart-Validation-Predictive-Workflow-Process-Analytics/wiki) • [Live Interactive Demo](#-quickstart-guide) • [Architecture Blueprint](#-architectural-overview) • [Process Mining Flow](#-end-to-end-process-mining-lifecycle) • [3-Way Matching Engine](#-autonomous-3-way-smart-matching) • [Vercel Deployment Guide](#-vercel-deployment-guide)
 
 </div>
 

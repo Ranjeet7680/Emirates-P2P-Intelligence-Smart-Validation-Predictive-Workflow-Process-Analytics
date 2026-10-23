@@ -73,3 +73,6 @@ Thumbs.db
 *.swp
 *.swo
 *.log
+
+# Git Wiki Clone
+wiki_repo/
