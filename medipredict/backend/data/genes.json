@@ -1,0 +1,87 @@
+[
+  {
+    "gene_symbol": "BRCA1",
+    "ncbi_id": "672",
+    "chromosome": "17q21.31",
+    "full_name": "BRCA1 DNA Repair Associated",
+    "inheritance_pattern": "Autosomal Dominant",
+    "associated_conditions": [
+      "Hereditary Breast and Ovarian Cancer Syndrome",
+      "Pancreatic Cancer",
+      "Prostate Cancer"
+    ],
+    "molecular_mechanism": "Encodes a nuclear phosphoprotein maintaining genomic stability through homologous recombination DNA double-strand break repair.",
+    "clinvar_summary": {
+      "pathogenic_count": 3240,
+      "benign_count": 1890,
+      "vus_count": 2410
+    },
+    "acmg_classification_guidance": "PVS1 null variants in known biologically active regions indicate high risk. Genetic counseling required.",
+    "clinical_implications": "Carriers benefit from enhanced MRI surveillance from age 25 and risk-reducing salpingo-oophorectomy between ages 35-40.",
+    "ncbi_link": "https://www.ncbi.nlm.nih.gov/gene/672",
+    "clinvar_link": "https://www.ncbi.nlm.nih.gov/clinvar/?term=BRCA1[gene]"
+  },
+  {
+    "gene_symbol": "CFTR",
+    "ncbi_id": "1080",
+    "chromosome": "7q31.2",
+    "full_name": "CF Transmembrane Conductance Regulator",
+    "inheritance_pattern": "Autosomal Recessive",
+    "associated_conditions": [
+      "Cystic Fibrosis",
+      "Congenital Bilateral Absence of the Vas Deferens (CBAVD)",
+      "Bronchiectasis"
+    ],
+    "molecular_mechanism": "ATP-binding cassette transporter acting as a cAMP-regulated chloride and bicarbonate channel across epithelial membranes.",
+    "clinvar_summary": {
+      "pathogenic_count": 1120,
+      "benign_count": 850,
+      "vus_count": 940
+    },
+    "acmg_classification_guidance": "c.1521_1523delCTT (p.Phe508del) represents the most common pathogenic mutation in Class II processing defects.",
+    "clinical_implications": "Targeted CFTR modulators (elexacaftor/tezacaftor/ivacaftor) restore channel gating and trafficking for eligible genotypes.",
+    "ncbi_link": "https://www.ncbi.nlm.nih.gov/gene/1080",
+    "clinvar_link": "https://www.ncbi.nlm.nih.gov/clinvar/?term=CFTR[gene]"
+  },
+  {
+    "gene_symbol": "APOE",
+    "ncbi_id": "348",
+    "chromosome": "19q13.32",
+    "full_name": "Apolipoprotein E",
+    "inheritance_pattern": "Complex / Multifactorial Co-dominant",
+    "associated_conditions": [
+      "Late-Onset Alzheimer Disease Susceptibility",
+      "Type III Hyperlipoproteinemia"
+    ],
+    "molecular_mechanism": "Essential component of chylomicrons and VLDL that mediates lipoprotein clearance via hepatic LDL receptors; isoform epsilon-4 reduces amyloid-beta clearance.",
+    "clinvar_summary": {
+      "pathogenic_count": 45,
+      "benign_count": 110,
+      "vus_count": 60
+    },
+    "acmg_classification_guidance": "APOE epsilon 4 is a susceptibility allele, NOT a deterministic diagnostic mutation. High penetrance modifier.",
+    "clinical_implications": "APOE e4 homozygotes have increased risk of ARIA (amyloid-related imaging abnormalities) when treated with anti-amyloid monoclonal antibodies.",
+    "ncbi_link": "https://www.ncbi.nlm.nih.gov/gene/348",
+    "clinvar_link": "https://www.ncbi.nlm.nih.gov/clinvar/?term=APOE[gene]"
+  },
+  {
+    "gene_symbol": "LDLR",
+    "ncbi_id": "3949",
+    "chromosome": "19p13.2",
+    "full_name": "Low Density Lipoprotein Receptor",
+    "inheritance_pattern": "Autosomal Dominant",
+    "associated_conditions": [
+      "Familial Hypercholesterolemia (FH-1)"
+    ],
+    "molecular_mechanism": "Cell surface receptor binding ApoB-100 and ApoE to mediate endocytosis of cholesterol-rich LDL particles.",
+    "clinvar_summary": {
+      "pathogenic_count": 2400,
+      "benign_count": 650,
+      "vus_count": 1420
+    },
+    "acmg_classification_guidance": "Loss-of-function variants cause premature atherosclerosis and tendon xanthomas with untreated LDL-C > 190 mg/dL.",
+    "clinical_implications": "Requires aggressive lifelong lipid-lowering therapy starting in childhood to prevent early myocardial infarction.",
+    "ncbi_link": "https://www.ncbi.nlm.nih.gov/gene/3949",
+    "clinvar_link": "https://www.ncbi.nlm.nih.gov/clinvar/?term=LDLR[gene]"
+  }
+]

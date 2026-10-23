@@ -1,0 +1,96 @@
+[
+  {
+    "rule_id": "P2P-REQ-001",
+    "version": "1.0",
+    "name": "Destination Position Existence & Active Check",
+    "severity": "error",
+    "request_types": [
+      "All"
+    ],
+    "description": "Destination position ID must exist in the active organizational structure.",
+    "correction_hint": "Select an existing, active position from the organizational directory."
+  },
+  {
+    "rule_id": "P2P-REQ-002",
+    "version": "1.0",
+    "name": "FTE Vacancy & Over-allocation Check",
+    "severity": "error",
+    "request_types": [
+      "Position-to-Person Assignment",
+      "Transfer",
+      "Promotion",
+      "New Joiner Assignment"
+    ],
+    "description": "Destination position must have available FTE capacity (< 1.0 currently filled).",
+    "correction_hint": "Choose an unallocated/vacant position or initiate a position vacancy request first."
+  },
+  {
+    "rule_id": "P2P-REQ-003",
+    "version": "1.0",
+    "name": "Grade Progression Consistency Check",
+    "severity": "error",
+    "request_types": [
+      "Promotion",
+      "Transfer",
+      "Position-to-Person Assignment"
+    ],
+    "description": "Candidate current grade cannot jump more than +1 grade level without Executive HR VP waiver.",
+    "correction_hint": "Align target grade to maximum +1 step above current grade or attach Senior VP HR waiver."
+  },
+  {
+    "rule_id": "P2P-REQ-004",
+    "version": "1.0",
+    "name": "Department & Cost Center Reconciliation",
+    "severity": "error",
+    "request_types": [
+      "All"
+    ],
+    "description": "Selected Cost Center must match the destination department's approved financial code.",
+    "correction_hint": "Select the verified departmental cost center from the authorized ledger."
+  },
+  {
+    "rule_id": "P2P-REQ-005",
+    "version": "1.0",
+    "name": "Effective Date Operational Lead Time Check",
+    "severity": "warning",
+    "request_types": [
+      "All"
+    ],
+    "description": "Target effective date is less than 14 calendar days from submission.",
+    "correction_hint": "Consider setting the effective date >= 14 days ahead to allow roster/payroll cycle alignment."
+  },
+  {
+    "rule_id": "P2P-REQ-006",
+    "version": "1.0",
+    "name": "Safety-Critical & Airside Clearance Check",
+    "severity": "error",
+    "request_types": [
+      "All"
+    ],
+    "description": "Flight Ops, Engineering, and Airport Ops positions require confirmed airside/medical clearance.",
+    "correction_hint": "Attach valid GCAA / Emirates Aviation Security and Medical clearance reference number."
+  },
+  {
+    "rule_id": "P2P-REQ-007",
+    "version": "1.0",
+    "name": "Inter-Departmental Release Endorsement Check",
+    "severity": "warning",
+    "request_types": [
+      "Transfer",
+      "Position-to-Person Assignment"
+    ],
+    "description": "Transfer across different business divisions requires releasing manager notification.",
+    "correction_hint": "Confirm that the current department head has provided formal release endorsement."
+  },
+  {
+    "rule_id": "P2P-REQ-008",
+    "version": "1.0",
+    "name": "Circular Reporting & Conflict of Interest Check",
+    "severity": "error",
+    "request_types": [
+      "All"
+    ],
+    "description": "Reporting position cannot report to itself or create a direct reporting circular loop.",
+    "correction_hint": "Specify a distinct supervisory position ID for reporting line hierarchy."
+  }
+]

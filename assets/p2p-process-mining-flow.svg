@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="flowBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B18" />
+      <stop offset="50%" stop-color="#09142B" />
+      <stop offset="100%" stop-color="#050A17" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111E38" />
+      <stop offset="100%" stop-color="#0B1325" />
+    </linearGradient>
+
+    <linearGradient id="accentCrimson" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D71921" />
+      <stop offset="100%" stop-color="#FF4D58" />
+    </linearGradient>
+
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D2FF" />
+      <stop offset="100%" stop-color="#0072FF" />
+    </linearGradient>
+
+    <linearGradient id="accentEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+
+    <filter id="neonPulse" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes dashFlow {
+        from { stroke-dashoffset: 200; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes packetPulse {
+        0% { offset-distance: 0%; opacity: 0; }
+        15% { opacity: 1; }
+        85% { opacity: 1; }
+        100% { offset-distance: 100%; opacity: 0; }
+      }
+      @keyframes cardGlow {
+        0%, 100% { stroke: #1E2E4E; }
+        50% { stroke: #00D2FF; }
+      }
+      @keyframes nodeBlink {
+        0%, 100% { transform: scale(1); opacity: 0.8; }
+        50% { transform: scale(1.25); opacity: 1; }
+      }
+      .flow-path { stroke-dasharray: 10 6; animation: dashFlow 8s linear infinite; }
+      .flow-path-fast { stroke-dasharray: 8 4; animation: dashFlow 4s linear infinite; }
+      .glow-card { animation: cardGlow 5s ease-in-out infinite; }
+      .blink-dot { animation: nodeBlink 2.5s ease-in-out infinite; transform-origin: center; }
+    </style>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1100" height="480" rx="16" fill="url(#flowBg)" stroke="#1E293B" stroke-width="1.2" />
+
+  <!-- Grid Overlay -->
+  <g opacity="0.08" stroke="#38BDF8" stroke-width="0.8">
+    <line x1="0" y1="80" x2="1100" y2="80" />
+    <line x1="0" y1="200" x2="1100" y2="200" />
+    <line x1="0" y1="320" x2="1100" y2="320" />
+    <line x1="0" y1="420" x2="1100" y2="420" />
+    <line x1="220" y1="0" x2="220" y2="480" />
+    <line x1="440" y1="0" x2="440" y2="480" />
+    <line x1="660" y1="0" x2="660" y2="480" />
+    <line x1="880" y1="0" x2="880" y2="480" />
+  </g>
+
+  <!-- Diagram Title Header -->
+  <g transform="translate(50, 45)">
+    <rect width="42" height="42" rx="10" fill="#132342" stroke="#233B6E" stroke-width="1" />
+    <text x="21" y="27" fill="#00D2FF" font-family="sans-serif" font-size="20" font-weight="900" text-anchor="middle">⚡</text>
+    <text x="56" y="22" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="800">
+      END-TO-END P2P PROCESS MINING LIFECYCLE
+    </text>
+    <text x="56" y="38" fill="#64748B" font-family="sans-serif" font-size="12" font-weight="500">
+      Real-Time Conformance Checking &amp; Autonomous Event Graph Sequencing (BPI Challenge Benchmark)
+    </text>
+  </g>
+
+  <!-- Conformance Badge -->
+  <g transform="translate(850, 42)">
+    <rect width="200" height="34" rx="8" fill="#0F2B26" stroke="#10B981" stroke-width="1.2" />
+    <circle cx="18" cy="17" r="5" fill="#10B981" class="blink-dot" />
+    <text x="32" y="22" fill="#A7F3D0" font-family="monospace" font-size="11.5" font-weight="700">CONFORMANCE: 98.7%</text>
+  </g>
+
+  <!-- Continuous Animated Connecting Pipeline -->
+  <path d="M 135,210 L 335,210 L 535,210 L 735,210 L 935,210" fill="none" stroke="#1E2E4E" stroke-width="8" stroke-linecap="round" />
+  <path d="M 135,210 L 335,210 L 535,210 L 735,210 L 935,210" fill="none" stroke="url(#accentCyan)" stroke-width="3" stroke-linecap="round" class="flow-path-fast" filter="url(#neonPulse)" />
+
+  <!-- Exception Rework Loop (Returning back to Validation) -->
+  <path d="M 735,290 C 735,390 335,390 335,290" fill="none" stroke="#D71921" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 4" class="flow-path" />
+  <g transform="translate(535, 395)">
+    <rect x="-105" y="-14" width="210" height="26" rx="6" fill="#250B10" stroke="#D71921" stroke-width="1" />
+    <text x="0" y="3" fill="#FF8A92" font-family="sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">
+      ⚠️ Discrepancy Escalation Loop (1.3%)
+    </text>
+  </g>
+
+  <!-- ==================== STAGE 1: Purchase Requisition ==================== -->
+  <g transform="translate(50, 130)">
+    <rect width="170" height="155" rx="14" fill="url(#cardGrad)" stroke="#1E2E4E" stroke-width="1.5" filter="url(#cardShadow)" />
+    <!-- Step Badge -->
+    <rect x="14" y="14" width="28" height="28" rx="8" fill="#1E2E4E" />
+    <text x="28" y="33" fill="#00D2FF" font-family="monospace" font-size="13" font-weight="800" text-anchor="middle">01</text>
+    <text x="50" y="32" fill="#94A3B8" font-family="sans-serif" font-size="11" font-weight="700" text-transform="uppercase">Requisition</text>
+    
+    <text x="14" y="68" fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="700">Smart Position</text>
+    <text x="14" y="86" fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="700">Assignment</text>
+
+    <text x="14" y="112" fill="#64748B" font-family="sans-serif" font-size="11" font-weight="500">Auto-routes to role</text>
+    <text x="14" y="128" fill="#64748B" font-family="sans-serif" font-size="11" font-weight="500">budget holder</text>
+
+    <rect x="14" y="137" width="142" height="4" rx="2" fill="#00D2FF" opacity="0.6" />
+  </g>
+
+  <!-- ==================== STAGE 2: PO Creation ==================== -->
+  <g transform="translate(250, 130)">
+    <rect width="170" height="155" rx="14" fill="url(#cardGrad)" stroke="#1E2E4E" stroke-width="1.5" filter="url(#cardShadow)" />
+    <rect x="14" y="14" width="28" height="28" rx="8" fill="#1E2E4E" />
+    <text x="28" y="33" fill="#00D2FF" font-family="monospace" font-size="13" font-weight="800" text-anchor="middle">02</text>
+    <text x="50" y="32" fill="#94A3B8" font-family="sans-serif" font-size="11" font-weight="700" text-transform="uppercase">ERP Dispatch</text>
+    
+    <text x="14" y="68" fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="700">Automated PO</text>
+    <text x="14" y="86" fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="700">Generation</text>
+
+    <text x="14" y="112" fill="#64748B" font-family="sans-serif" font-size="11" font-weight="500">Vendor terms matched</text>
+    <text x="14" y="128" fill="#64748B" font-family="sans-serif" font-size="11" font-weight="500">SAP / Oracle sync</text>
+
+    <rect x="14" y="137" width="142" height="4" rx="2" fill="#00D2FF" opacity="0.7" />
+  </g>
+
+  <!-- ==================== STAGE 3: Goods Receipt ==================== -->
+  <g transform="translate(450, 130)">
+    <rect width="170" height="155" rx="14" fill="url(#cardGrad)" stroke="#1E2E4E" stroke-width="1.5" filter="url(#cardShadow)" />
+    <rect x="14" y="14" width="28" height="28" rx="8" fill="#1E2E4E" />
+    <text x="28" y="33" fill="#00D2FF" font-family="monospace" font-size="13" font-weight="800" text-anchor="middle">03</text>
+    <text x="50" y="32" fill="#94A3B8" font-family="sans-serif" font-size="11" font-weight="700" text-transform="uppercase">Logistics</text>
+    
+    <text x="14" y="68" fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="700">Goods Receipt</text>
+    <text x="14" y="86" fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="700">(GRN) Ingestion</text>
+
+    <text x="14" y="112" fill="#64748B" font-family="sans-serif" font-size="11" font-weight="500">Physical inspection</text>
+    <text x="14" y="128" fill="#64748B" font-family="sans-serif" font-size="11" font-weight="500">Lot tracking validated</text>
+
+    <rect x="14" y="137" width="142" height="4" rx="2" fill="#00D2FF" opacity="0.8" />
+  </g>
+
+  <!-- ==================== STAGE 4: AI 3-Way Match ==================== -->
+  <g transform="translate(650, 115)">
+    <!-- Highlighted Active Card with Cyan Glow -->
+    <rect width="180" height="175" rx="14" fill="#0F1E3A" stroke="#00D2FF" stroke-width="2" filter="url(#cardShadow)" class="glow-card" />
+    <rect x="14" y="14" width="28" height="28" rx="8" fill="#D71921" />
+    <text x="28" y="33" fill="#FFFFFF" font-family="monospace" font-size="13" font-weight="900" text-anchor="middle">04</text>
+    <text x="50" y="32" fill="#38BDF8" font-family="sans-serif" font-size="11" font-weight="800" text-transform="uppercase">AI Smart Engine</text>
+    
+    <text x="14" y="70" fill="#FFFFFF" font-family="sans-serif" font-size="15" font-weight="800">3-Way Match &amp;</text>
+    <text x="14" y="90" fill="#FFFFFF" font-family="sans-serif" font-size="15" font-weight="800">Invoice Triage</text>
+
+    <text x="14" y="120" fill="#94A3B8" font-family="sans-serif" font-size="11" font-weight="500">OCR line-item audit</text>
+    <text x="14" y="138" fill="#10B981" font-family="sans-serif" font-size="11" font-weight="700">Confidence: 99.4%</text>
+
+    <rect x="14" y="153" width="152" height="6" rx="3" fill="url(#accentCrimson)" />
+  </g>
+
+  <!-- ==================== STAGE 5: Payment Clearance ==================== -->
+  <g transform="translate(860, 130)">
+    <rect width="180" height="155" rx="14" fill="url(#cardGrad)" stroke="#10B981" stroke-width="1.5" filter="url(#cardShadow)" />
+    <rect x="14" y="14" width="28" height="28" rx="8" fill="#0F2B26" />
+    <text x="28" y="33" fill="#10B981" font-family="monospace" font-size="13" font-weight="800" text-anchor="middle">05</text>
+    <text x="50" y="32" fill="#10B981" font-family="sans-serif" font-size="11" font-weight="700" text-transform="uppercase">Settlement</text>
+    
+    <text x="14" y="68" fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="700">Autonomous</text>
+    <text x="14" y="86" fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="700">ERP Clearance</text>
+
+    <text x="14" y="112" fill="#64748B" font-family="sans-serif" font-size="11" font-weight="500">Early payment rebate</text>
+    <text x="14" y="128" fill="#64748B" font-family="sans-serif" font-size="11" font-weight="500">Zero duplicate risk</text>
+
+    <rect x="14" y="137" width="152" height="4" rx="2" fill="#10B981" />
+  </g>
+
+  <!-- Bottom Telemetry Ribbon -->
+  <g transform="translate(50, 420)">
+    <text x="0" y="12" fill="#64748B" font-family="monospace" font-size="11">STAGE TELEMETRY:</text>
+    <text x="135" y="12" fill="#38BDF8" font-family="sans-serif" font-size="11">PR-to-PO: <tspan font-weight="700">0.8d</tspan></text>
+    <text x="335" y="12" fill="#38BDF8" font-family="sans-serif" font-size="11">PO Dispatch: <tspan font-weight="700">Instant</tspan></text>
+    <text x="535" y="12" fill="#38BDF8" font-family="sans-serif" font-size="11">GRN Handshake: <tspan font-weight="700">1.2d</tspan></text>
+    <text x="735" y="12" fill="#10B981" font-family="sans-serif" font-size="11">3-Way Match: <tspan font-weight="700">&lt; 350ms</tspan></text>
+    <text x="940" y="12" fill="#10B981" font-family="sans-serif" font-size="11">ERP Post: <tspan font-weight="700">Direct</tspan></text>
+  </g>
+</svg>

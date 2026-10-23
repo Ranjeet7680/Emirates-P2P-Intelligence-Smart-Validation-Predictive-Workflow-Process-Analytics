@@ -1,0 +1,222 @@
+{
+  "source_dataset": "IEEE BPI Challenge 2019 (P2P SAP Process Mining)",
+  "analyzed_events": 150000,
+  "analyzed_cases": 38068,
+  "unique_activity_types": 36,
+  "event_distribution": {
+    "Create Purchase Order Item": 37732,
+    "Record Goods Receipt": 33090,
+    "Vendor creates invoice": 24525,
+    "Record Service Entry Sheet": 19869,
+    "Record Invoice Receipt": 16662,
+    "Receive Order Confirmation": 4117,
+    "Remove Payment Block": 3072,
+    "Change Quantity": 2271,
+    "Change Price": 1454,
+    "Clear Invoice": 1401,
+    "Delete Purchase Order Item": 1374,
+    "Vendor creates debit memo": 561,
+    "Change Approval for Purchase Order": 507,
+    "Create Purchase Requisition Item": 349,
+    "SRM: In Transfer to Execution Syst.": 303,
+    "SRM: Ordered": 301,
+    "SRM: Complete": 301,
+    "SRM: Awaiting Approval": 301,
+    "SRM: Document Completed": 301,
+    "SRM: Created": 301,
+    "SRM: Change was Transmitted": 294,
+    "Cancel Goods Receipt": 252,
+    "Change Delivery Indicator": 233,
+    "Release Purchase Order": 113,
+    "Cancel Invoice Receipt": 102,
+    "Reactivate Purchase Order Item": 99,
+    "Update Order Confirmation": 36,
+    "Block Purchase Order Item": 33,
+    "Change Storage Location": 13,
+    "Cancel Subsequent Invoice": 9,
+    "SRM: Deleted": 7,
+    "Change Currency": 5,
+    "Record Subsequent Invoice": 4,
+    "SRM: Incomplete": 3,
+    "SRM: Held": 3,
+    "SRM: Transaction Completed": 2
+  },
+  "document_type_distribution": {
+    "Standard PO": 144786,
+    "EC Purchase order": 3061,
+    "Framework order": 2153
+  },
+  "spend_area_distribution": {
+    "Packaging": 54596,
+    "Sales": 31217,
+    "Logistics": 29188,
+    "Trading & End Products": 9999,
+    "Additives": 9020,
+    "CAPEX & SOCS": 4111,
+    "Latex & Monomers": 2703,
+    "Solvents": 1476,
+    "Pigments & Colorants": 1419,
+    "Others": 1325
+  },
+  "top_process_variants": [
+    {
+      "variant_path": "Create Purchase Order Item",
+      "case_count": 7843,
+      "percentage": 20.6
+    },
+    {
+      "variant_path": "Create Purchase Order Item -> Vendor creates invoice -> Record Goods Receipt -> Record Invoice Receipt",
+      "case_count": 4807,
+      "percentage": 12.63
+    },
+    {
+      "variant_path": "Create Purchase Order Item -> Record Goods Receipt -> Vendor creates invoice -> Record Invoice Receipt",
+      "case_count": 3033,
+      "percentage": 7.97
+    },
+    {
+      "variant_path": "Create Purchase Order Item -> Vendor creates invoice -> Record Goods Receipt",
+      "case_count": 2988,
+      "percentage": 7.85
+    },
+    {
+      "variant_path": "Create Purchase Order Item -> Record Goods Receipt",
+      "case_count": 2103,
+      "percentage": 5.52
+    },
+    {
+      "variant_path": "Create Purchase Order Item -> Record Goods Receipt -> Vendor creates invoice",
+      "case_count": 1586,
+      "percentage": 4.17
+    },
+    {
+      "variant_path": "Create Purchase Order Item -> Vendor creates invoice -> Record Invoice Receipt -> Record Goods Receipt -> Remove Payment Block",
+      "case_count": 1382,
+      "percentage": 3.63
+    },
+    {
+      "variant_path": "Create Purchase Order Item -> Receive Order Confirmation -> Record Goods Receipt -> Vendor creates invoice -> Record Invoice Receipt",
+      "case_count": 1146,
+      "percentage": 3.01
+    },
+    {
+      "variant_path": "Create Purchase Order Item -> Delete Purchase Order Item",
+      "case_count": 1104,
+      "percentage": 2.9
+    },
+    {
+      "variant_path": "Create Purchase Order Item -> Receive Order Confirmation -> Vendor creates invoice -> Record Goods Receipt -> Record Invoice Receipt",
+      "case_count": 793,
+      "percentage": 2.08
+    }
+  ],
+  "top_transitions": [
+    {
+      "from_event": "Record Service Entry Sheet",
+      "to_event": "Record Service Entry Sheet",
+      "frequency": 15864
+    },
+    {
+      "from_event": "Create Purchase Order Item",
+      "to_event": "Vendor creates invoice",
+      "frequency": 12277
+    },
+    {
+      "from_event": "Vendor creates invoice",
+      "to_event": "Record Goods Receipt",
+      "frequency": 11813
+    },
+    {
+      "from_event": "Create Purchase Order Item",
+      "to_event": "Record Goods Receipt",
+      "frequency": 8432
+    },
+    {
+      "from_event": "Record Goods Receipt",
+      "to_event": "Record Invoice Receipt",
+      "frequency": 8208
+    },
+    {
+      "from_event": "Record Goods Receipt",
+      "to_event": "Vendor creates invoice",
+      "frequency": 7823
+    },
+    {
+      "from_event": "Vendor creates invoice",
+      "to_event": "Record Invoice Receipt",
+      "frequency": 7719
+    },
+    {
+      "from_event": "Record Goods Receipt",
+      "to_event": "Record Goods Receipt",
+      "frequency": 4343
+    },
+    {
+      "from_event": "Create Purchase Order Item",
+      "to_event": "Receive Order Confirmation",
+      "frequency": 3785
+    },
+    {
+      "from_event": "Record Service Entry Sheet",
+      "to_event": "Record Goods Receipt",
+      "frequency": 3172
+    },
+    {
+      "from_event": "Record Goods Receipt",
+      "to_event": "Record Service Entry Sheet",
+      "frequency": 3149
+    },
+    {
+      "from_event": "Record Invoice Receipt",
+      "to_event": "Record Goods Receipt",
+      "frequency": 2141
+    },
+    {
+      "from_event": "Record Goods Receipt",
+      "to_event": "Remove Payment Block",
+      "frequency": 1998
+    },
+    {
+      "from_event": "Receive Order Confirmation",
+      "to_event": "Record Goods Receipt",
+      "frequency": 1728
+    },
+    {
+      "from_event": "Create Purchase Order Item",
+      "to_event": "Change Quantity",
+      "frequency": 1497
+    },
+    {
+      "from_event": "Receive Order Confirmation",
+      "to_event": "Vendor creates invoice",
+      "frequency": 1290
+    },
+    {
+      "from_event": "Create Purchase Order Item",
+      "to_event": "Delete Purchase Order Item",
+      "frequency": 1197
+    },
+    {
+      "from_event": "Record Invoice Receipt",
+      "to_event": "Clear Invoice",
+      "frequency": 1062
+    },
+    {
+      "from_event": "Create Purchase Order Item",
+      "to_event": "Change Price",
+      "frequency": 961
+    },
+    {
+      "from_event": "Record Invoice Receipt",
+      "to_event": "Remove Payment Block",
+      "frequency": 950
+    }
+  ],
+  "rework_indicators": {
+    "payment_blocks_encountered": 3105,
+    "quantity_changes_count": 2271,
+    "price_changes_count": 1454,
+    "vendor_invoices_count": 24525
+  },
+  "median_case_duration_days": 12.57
+}

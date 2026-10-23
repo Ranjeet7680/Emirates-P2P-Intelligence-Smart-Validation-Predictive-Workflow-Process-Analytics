@@ -1,0 +1,730 @@
+
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-dim": "#cfdaf3", "on-tertiary-fixed-variant": "#8a1438", "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "on-primary-container": "#798bac", "outline": "#75777e", "tertiary-container": "#4e0019", "on-secondary-fixed": "#001a41", "primary-fixed": "#d6e3ff", "error-container": "#ffdad6", "secondary-container": "#7ca8fd", "on-secondary-fixed-variant": "#004493", "on-secondary-container": "#003b82", "on-tertiary-fixed": "#400013", "inverse-on-surface": "#ecf1ff", "on-background": "#111c2d", "on-surface": "#111c2d", "secondary-fixed": "#d8e2ff", "outline-variant": "#c5c6ce", "on-error": "#ffffff", "tertiary-fixed-dim": "#ffb2bd", "surface-tint": "#4d5f7e", "surface-container-low": "#f0f3ff", "primary": "#000d23", "error": "#ba1a1a", "on-primary": "#ffffff", "on-surface-variant": "#44474d", "surface-container-highest": "#d8e3fb", "inverse-surface": "#263143", "inverse-primary": "#b5c7eb", "surface-container": "#e7eeff", "primary-fixed-dim": "#b5c7eb", "background": "#f9f9ff", "on-secondary": "#ffffff", "secondary-fixed-dim": "#adc6ff", "on-tertiary-container": "#e55b78", "surface-variant": "#d8e3fb", "tertiary": "#250008", "secondary": "#2b5cad", "on-error-container": "#93000a", "on-primary-fixed": "#071b37", "primary-container": "#10233f", "surface-bright": "#f9f9ff", "surface-container-high": "#dee8ff", "on-primary-fixed-variant": "#364765", "surface": "#f9f9ff", "tertiary-fixed": "#ffd9dd" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-lg": "1.25rem", "space-xl": "2rem", "margin-mobile": "1rem", "margin": "2rem", "gutter-mobile": "0.75rem", "space-md": "0.75rem", "gutter": "1.25rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-md": ["Inter"], "headline-xl-mobile": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "label-md": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"], "headline-xl": ["Inter"], "body-md": ["Inter"], "code-md": ["JetBrains Mono"] }, "fontSize": { "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "code-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "500" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[248px] bg-primary text-on-primary z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><div class="flex flex-col h-full overflow-hidden"><div class="h-[72px] px-space-lg flex items-center justify-between shrink-0 bg-primary-container/40"><div class="flex items-center gap-space-sm"><img alt="Emirates P2P Intelligence Logo Mark" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WJXTmJfYZwM0UE98hYpvRKSQOfdgDqto5hs8bP_xbKuatyTsLNiZQLis-AAvIRZVBo9bn5oW_T0QqF0FHg5DFCaHmp__xplT1t3b784N5HjFym7GrEI-md9JYL0Fz7QDuavQbFFR3kl6QIY_obKNay6y76nRGT5dC2mQQJ6btEsy_hVZVicB2zgpKy_QxllkNc4Lxc5646TCab4RAmWGpuppO5QBjyeTp0msKxZA0Jajiz-pq0ZKbqdxA"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-primary leading-tight tracking-tight">Emirates P2P</span><span class="font-label-sm text-label-sm text-on-primary-container tracking-wider uppercase">Intelligence</span></div></div><button aria-label="Collapse Navigation" class="text-on-primary-container hover:text-on-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">keyboard_double_arrow_left</span></button></div><div class="flex-1 overflow-y-auto px-space-md py-space-md space-y-space-lg"><nav class="space-y-space-xs" data-active-classes="bg-secondary text-on-secondary font-headline-sm rounded-lg"><div class="px-space-sm pb-space-xs text-on-primary-container font-label-sm text-label-sm uppercase tracking-wider">Workspace</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-primary-container hover:bg-primary-container hover:text-on-primary transition-colors font-body-sm text-body-sm" data-path="overview-dashboard" href="#"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span>Overview / Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-primary-container hover:bg-primary-container hover:text-on-primary transition-colors font-body-sm text-body-sm" data-path="my-requests" href="#"><span class="material-symbols-outlined text-[18px]">inbox</span><span>My Requests</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-primary-container hover:bg-primary-container hover:text-on-primary transition-colors font-body-sm text-body-sm" data-path="create-request" href="#"><span class="material-symbols-outlined text-[18px]">add_circle</span><span>Create Request</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-primary-container hover:bg-primary-container hover:text-on-primary transition-colors font-body-sm text-body-sm" data-path="request-tracking" href="#"><span class="material-symbols-outlined text-[18px]">track_changes</span><span>Request Tracking</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-secondary text-on-secondary font-headline-sm rounded-lg"><div class="px-space-sm pb-space-xs text-on-primary-container font-label-sm text-label-sm uppercase tracking-wider">Intelligence</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-primary-container hover:bg-primary-container hover:text-on-primary transition-colors font-body-sm text-body-sm" data-path="ai-predictions" href="#"><span class="material-symbols-outlined text-[18px]">auto_awesome</span><span>AI Predictions</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-primary-container hover:bg-primary-container hover:text-on-primary transition-colors font-body-sm text-body-sm" data-path="process-intelligence" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span>Process Intelligence</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs transition-colors bg-secondary text-on-secondary font-headline-sm rounded-lg" data-path="improvement-recommendations" href="#"><span class="material-symbols-outlined text-[18px]">lightbulb</span><span>Recommendations</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-primary-container hover:bg-primary-container hover:text-on-primary transition-colors font-body-sm text-body-sm" data-path="time-saving-calculator" href="#"><span class="material-symbols-outlined text-[18px]">timelapse</span><span>Time Savings</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-secondary text-on-secondary font-headline-sm rounded-lg"><div class="px-space-sm pb-space-xs text-on-primary-container font-label-sm text-label-sm uppercase tracking-wider">HR Operations</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-primary-container hover:bg-primary-container hover:text-on-primary transition-colors font-body-sm text-body-sm" data-path="operations-queue" href="#"><span class="material-symbols-outlined text-[18px]">pending_actions</span><span>Operations Queue</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-primary-container hover:bg-primary-container hover:text-on-primary transition-colors font-body-sm text-body-sm" data-path="validation-centre" href="#"><span class="material-symbols-outlined text-[18px]">verified</span><span>Validation Centre</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-primary-container hover:bg-primary-container hover:text-on-primary transition-colors font-body-sm text-body-sm" data-path="audit-trail" href="#"><span class="material-symbols-outlined text-[18px]">history_toggle_off</span><span>Audit Trail</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-secondary text-on-secondary font-headline-sm rounded-lg"><div class="px-space-sm pb-space-xs text-on-primary-container font-label-sm text-label-sm uppercase tracking-wider">Administration</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-primary-container hover:bg-primary-container hover:text-on-primary transition-colors font-body-sm text-body-sm" data-path="reports-exports" href="#"><span class="material-symbols-outlined text-[18px]">summarize</span><span>Reports &amp; Exports</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-primary-container hover:bg-primary-container hover:text-on-primary transition-colors font-body-sm text-body-sm" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>Settings</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-primary-container hover:bg-primary-container hover:text-on-primary transition-colors font-body-sm text-body-sm" data-path="help-support" href="#"><span class="material-symbols-outlined text-[18px]">help_outline</span><span>Help &amp; Support</span></a></nav></div><div class="p-space-md shrink-0 bg-primary-container/60"><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><div class="relative shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHQvk6__Ofk-T8cbELe-ZZXMAmRth3JEFNrzKVGbfc6vRB0DhAKKtaye0rXswy6XoRhGKaJ4LdXP6SmmdnZV1xnQAEwWJqK8uhBtirT47WgPsD87G5weueabQ7cMIXHbJEfXBHBBjP_lQYy3CKgwNTVzm5BZ62h0MsNPZ6dteAD5E6cz2TRfs0V4xY3-Q7hhf_HNDod4n_2ffm3i0__dN7CcoFxQvxsjEdW7ACxlWKDitaerIs14NKNQ"/><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-secondary ring-1 ring-primary"></span></div><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-primary truncate">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-on-primary-container truncate">HR Ops Lead</span></div></div><button aria-label="Logout" class="text-on-primary-container hover:text-on-primary p-space-xs rounded transition-colors" title="Logout" type="button"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></div></div></aside><div class="pl-[248px]"><div class="fixed top-0 left-[248px] right-0 z-40 bg-surface-container-high/90 backdrop-blur-md px-space-lg py-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-tertiary">shield_lock</span><span class="font-headline-sm text-label-sm text-on-surface">Prototype environment</span><span>·</span><span>Synthetic operational data only</span></div><div class="flex items-center gap-space-sm"><span class="font-code-md text-code-md text-on-surface-variant">v2.4-rc3</span></div></div><header class="fixed top-7 left-[248px] right-0 h-[72px] bg-surface-container-lowest/90 backdrop-blur-xl z-30 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-lg"><img alt="Emirates P2P Intelligence Logo Mark" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WJXTmJfYZwM0UE98hYpvRKSQOfdgDqto5hs8bP_xbKuatyTsLNiZQLis-AAvIRZVBo9bn5oW_T0QqF0FHg5DFCaHmp__xplT1t3b784N5HjFym7GrEI-md9JYL0Fz7QDuavQbFFR3kl6QIY_obKNay6y76nRGT5dC2mQQJ6btEsy_hVZVicB2zgpKy_QxllkNc4Lxc5646TCab4RAmWGpuppO5QBjyeTp0msKxZA0Jajiz-pq0ZKbqdxA"/><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md text-primary">Emirates P2P Intelligence</span><span class="px-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm">v2.4 Demo</span></div><div class="hidden xl:flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm pl-space-md"><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="text-on-surface-variant">Console</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="text-on-surface font-headline-sm text-body-sm">Executive Verification</span></div></div><div class="flex items-center gap-space-md"><div class="relative hidden lg:flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span><input class="w-72 h-10 pl-9 pr-12 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/30 transition-all" placeholder="Quick search processes, IDs, anomalies..." type="text"/><kbd class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-code-md text-label-sm uppercase">Ctrl+K</kbd></div><div class="h-6 w-px bg-outline-variant/40 hidden md:block"></div><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary-container ring-2 ring-surface-container-lowest"></span></button><button aria-label="Documentation" class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">menu_book</span></button><div class="flex items-center gap-space-xs px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md cursor-pointer hover:bg-surface-container-high transition-colors"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>Role: Line Manager</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">unfold_more</span></div><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHQvk6__Ofk-T8cbELe-ZZXMAmRth3JEFNrzKVGbfc6vRB0DhAKKtaye0rXswy6XoRhGKaJ4LdXP6SmmdnZV1xnQAEwWJqK8uhBtirT47WgPsD87G5weueabQ7cMIXHbJEfXBHBBjP_lQYy3CKgwNTVzm5BZ62h0MsNPZ6dteAD5E6cz2TRfs0V4xY3-Q7hhf_HNDod4n_2ffm3i0__dN7CcoFxQvxsjEdW7ACxlWKDitaerIs14NKNQ"/><div class="hidden 2xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-none">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-1">HR Ops Lead</span></div><span class="material-symbols-outlined text-[18px] text-on-surface-variant cursor-pointer">arrow_drop_down</span></div></div></header><main class="relative pt-[100px] w-full min-h-screen bg-background px-space-xl pb-space-xl"><div class="flex flex-col w-full gap-space-xl">
+<!-- Top Executive Header & Context Strip -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg bg-surface-container-lowest p-space-xl rounded-xl shadow-sm relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-secondary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-xs max-w-3xl z-10">
+<div class="flex flex-wrap items-center gap-space-sm mb-1">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">analytics</span>
+          Synthetic Benchmark Dataset
+        </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+          Model Confidence: High (92% sample coverage)
+        </span>
+<span class="font-code-md text-code-md text-on-surface-variant">REC-MOD-2025-Q1</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">
+        Improvement Recommendations &amp; Time-Saving Calculator
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1">
+        Evidence-based process enhancements paired with an interactive ROI simulation engine to quantify operational time savings across procurement and personnel requisitions.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 z-10">
+<button class="flex items-center gap-space-xs px-4 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors shadow-sm" onclick="exportFullScenarioReport()" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+        Export Briefing Memo
+      </button>
+<button class="flex items-center gap-space-xs px-4 py-2.5 rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-fixed-variant font-label-md text-label-md transition-all shadow-sm hover:shadow" onclick="scrollToCalculator()" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+        Configure Simulation
+      </button>
+</div>
+</div>
+<!-- SECTION 1: Evidence-Based Recommendation Cards -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-1.5 h-6 rounded-full bg-secondary"></span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Evidence-Based Recommendations</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">3 Strategic Opportunities</span>
+</div>
+<div class="text-right hidden sm:block">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Aggregated Target Salvage:</span>
+<span class="font-headline-sm text-headline-sm text-secondary ml-1">~385 hrs / month</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- REC CARD 1 -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg relative overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group">
+<div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-secondary to-secondary-container"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-code-md text-label-sm">
+              REC-01 · CORE INTEGRATION
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-fixed-variant"></span>
+              Ready for Pilot Review
+            </span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">
+              Automated Pre-Submission Grade &amp; Hierarchy Validation
+            </h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Target Domain:</span>
+<span class="font-code-md text-code-md text-on-surface">Personnel to Post (P2P)</span>
+</div>
+</div>
+<!-- Problem & Intervention Block -->
+<div class="space-y-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-1.5 text-on-error-container font-label-sm text-label-sm mb-1">
+<span class="material-symbols-outlined text-[16px] text-error">report_problem</span>
+<span>Root Disruption</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-headline-sm text-on-surface">41% of all P2P returns</strong> occur at Initial Validation due to Grade and Department discrepancies.
+              </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container">
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm mb-1">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Proposed Intervention</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Real-time blocking validation at Step 2 of the request form using live SAP-HR organizational structural tables.
+              </p>
+</div>
+</div>
+<!-- Impact Metrics Strip -->
+<div class="grid grid-cols-2 gap-space-xs py-space-xs">
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rework Loop Reduction</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-lg text-headline-lg text-secondary">-38%</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">trending_down</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Estimated Enterprise Salvage</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-lg text-headline-lg text-primary">210h</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ month</span>
+</div>
+</div>
+</div>
+<!-- Inline Visual telemetry bar -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Return Rate Mitigation Simulation</span>
+<span class="font-code-md text-code-md text-secondary">41% → 25.4%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden flex">
+<div class="h-full bg-secondary rounded-full" style="width: 62%;"></div>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between gap-space-sm bg-surface-container-lowest">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">speed</span>
+<span>Effort: <strong class="text-on-surface font-headline-sm">Medium</strong> (API rules)</span>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-secondary hover:bg-secondary hover:text-on-secondary font-label-md text-label-md transition-colors" onclick="loadPreset(350, 41, 75, 65, 'Automated Pre-Submission Validation', 'Medium - 3 Weeks')" type="button">
+<span>Load in Calculator</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</button>
+</div>
+</div>
+<!-- REC CARD 2 -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg relative overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group">
+<div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-secondary-container to-surface-tint"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-code-md text-label-sm">
+              REC-02 · WORKFLOW CHAINING
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Engineering Specification
+            </span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">
+              Automated Prerequisite Dependency Notification
+            </h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Target Domain:</span>
+<span class="font-code-md text-code-md text-on-surface">Crew Fleet Reallocation</span>
+</div>
+</div>
+<!-- Problem & Intervention Block -->
+<div class="space-y-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-1.5 text-on-error-container font-label-sm text-label-sm mb-1">
+<span class="material-symbols-outlined text-[16px] text-error">report_problem</span>
+<span>Root Disruption</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Requests stall for an average of <strong class="font-headline-sm text-on-surface">4.6 days</strong> waiting for unlinked source position backfill creation.
+              </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container">
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm mb-1">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Proposed Intervention</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Prompt requester to trigger linked backfill with one-click position cloning during initial submission stage.
+              </p>
+</div>
+</div>
+<!-- Impact Metrics Strip -->
+<div class="grid grid-cols-2 gap-space-xs py-space-xs">
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Stage Idle Time Reduction</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-lg text-headline-lg text-secondary">-52%</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">hourglass_bottom</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cycle Acceleration</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-lg text-headline-lg text-primary">2.4d</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">net turnaround</span>
+</div>
+</div>
+</div>
+<!-- Inline Visual telemetry bar -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Backfill Synchronization Velocity</span>
+<span class="font-code-md text-code-md text-secondary">4.6d → 2.2d</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden flex">
+<div class="h-full bg-secondary rounded-full" style="width: 52%;"></div>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between gap-space-sm bg-surface-container-lowest">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">speed</span>
+<span>Effort: <strong class="text-on-surface font-headline-sm">Low</strong> (Event hooks)</span>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-secondary hover:bg-secondary hover:text-on-secondary font-label-md text-label-md transition-colors" onclick="loadPreset(280, 31, 110, 52, 'Automated Prerequisite Dependency Notification', 'Low - 1 Week')" type="button">
+<span>Load in Calculator</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</button>
+</div>
+</div>
+<!-- REC CARD 3 -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg relative overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group">
+<div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-tertiary to-secondary"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-code-md text-label-sm">
+              REC-03 · ADAPTIVE ORCHESTRATION
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Governance Scoping
+            </span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">
+              Smart Approver Re-routing for Backlogged Queues
+            </h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Target Domain:</span>
+<span class="font-code-md text-code-md text-on-surface">Peak Flight Scheduling</span>
+</div>
+</div>
+<!-- Problem & Intervention Block -->
+<div class="space-y-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-1.5 text-on-error-container font-label-sm text-label-sm mb-1">
+<span class="material-symbols-outlined text-[16px] text-error">report_problem</span>
+<span>Root Disruption</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Single-point approval bottlenecks <strong class="font-headline-sm text-on-surface">exceed target SLA by 48h</strong> during peak flight scheduling cycles.
+              </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container">
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm mb-1">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Proposed Intervention</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Dynamic secondary delegate routing initiated automatically after 24 hours of inactivity during defined peak duty rosters.
+              </p>
+</div>
+</div>
+<!-- Impact Metrics Strip -->
+<div class="grid grid-cols-2 gap-space-xs py-space-xs">
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">SLA Breach Rate</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-lg text-headline-lg text-tertiary">34% → 12%</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bottleneck Relief</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-lg text-headline-lg text-primary">64.7%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">flow rate</span>
+</div>
+</div>
+</div>
+<!-- Inline Visual telemetry bar -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Approval Queue Clearance Latency</span>
+<span class="font-code-md text-code-md text-secondary">Target SLA 91% Compliance</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden flex">
+<div class="h-full bg-secondary rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between gap-space-sm bg-surface-container-lowest">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">speed</span>
+<span>Effort: <strong class="text-on-surface font-headline-sm">High</strong> (Matrix delegation)</span>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-secondary hover:bg-secondary hover:text-on-secondary font-label-md text-label-md transition-colors" onclick="loadPreset(420, 34, 90, 60, 'Smart Approver Re-routing for Backlogs', 'High - 6 Weeks')" type="button">
+<span>Load in Calculator</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Interactive Time-Saving Calculator -->
+<section class="flex flex-col gap-space-lg" id="simulation-calculator">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="w-1.5 h-6 rounded-full bg-secondary"></span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Interactive Time-Saving Calculator</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Scenario Simulation Model — Calculate potential operational time savings using explicit variables.
+        </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Model:</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-primary font-headline-sm text-label-sm" id="activeModelBadge">
+          Baseline Simulation
+        </span>
+</div>
+</div>
+<!-- Main Dual-Column Interactive Panel -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Input Parameters Form (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">tune</span>
+<h3 class="font-headline-md text-headline-md text-primary">Input Parameters</h3>
+</div>
+<button class="font-label-sm text-label-sm text-secondary hover:underline flex items-center gap-1" onclick="resetCalculatorDefaults()" type="button">
+<span class="material-symbols-outlined text-[14px]">restart_alt</span>
+            Reset Defaults
+          </button>
+</div>
+<!-- Param 1: Monthly Request Volume -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface" for="inputVolume">Monthly Request Volume</label>
+<div class="flex items-center gap-1">
+<span class="font-code-md text-code-md text-primary font-bold" id="labelVolumeVal">350</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">req / mo</span>
+</div>
+</div>
+<input class="w-full accent-secondary cursor-pointer h-2 bg-surface-container rounded-lg" id="inputVolume" max="1200" min="50" oninput="recalculateModel()" step="10" type="range" value="350"/>
+<div class="flex justify-between text-[10px] text-on-surface-variant font-code-md">
+<span>50 min</span>
+<span>Historical Baseline: 350</span>
+<span>1,200 max</span>
+</div>
+</div>
+<!-- Param 2: Proportion Affected -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface" for="inputProportion">Proportion of Requests Affected (%)</label>
+<div class="flex items-center gap-1">
+<span class="font-code-md text-code-md text-primary font-bold" id="labelProportionVal">42%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="labelProportionDerived">(147 requests)</span>
+</div>
+</div>
+<input class="w-full accent-secondary cursor-pointer h-2 bg-surface-container rounded-lg" id="inputProportion" max="95" min="5" oninput="recalculateModel()" step="1" type="range" value="42"/>
+<div class="flex justify-between text-[10px] text-on-surface-variant font-code-md">
+<span>5%</span>
+<span>Typical: 30% - 45%</span>
+<span>95%</span>
+</div>
+</div>
+<!-- Param 3: Avoidable Rework Time per Request -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface" for="inputReworkMinutes">Current Avoidable Rework Time</label>
+<div class="flex items-center gap-1">
+<span class="font-code-md text-code-md text-primary font-bold" id="labelReworkVal">75</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">minutes</span>
+</div>
+</div>
+<input class="w-full accent-secondary cursor-pointer h-2 bg-surface-container rounded-lg" id="inputReworkMinutes" max="240" min="15" oninput="recalculateModel()" step="5" type="range" value="75"/>
+<div class="flex justify-between text-[10px] text-on-surface-variant font-code-md">
+<span>15 min</span>
+<span>Avg Audit Cycle: 75 min</span>
+<span>240 min (4h)</span>
+</div>
+</div>
+<!-- Param 4: Expected Reduction Efficiency -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface" for="inputEfficiency">Expected Reduction Efficiency (%)</label>
+<div class="flex items-center gap-1">
+<span class="font-code-md text-code-md text-primary font-bold" id="labelEfficiencyVal">65%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">mitigation</span>
+</div>
+</div>
+<input class="w-full accent-secondary cursor-pointer h-2 bg-surface-container rounded-lg" id="inputEfficiency" max="95" min="10" oninput="recalculateModel()" step="5" type="range" value="65"/>
+<div class="flex justify-between text-[10px] text-on-surface-variant font-code-md">
+<span>10% Low</span>
+<span>Automated Gate Target: 65%</span>
+<span>95% Max</span>
+</div>
+</div>
+<!-- Param 5: Implementation & Rollout Effort (Dropdown) -->
+<div class="flex flex-col gap-1.5 pt-space-xs">
+<label class="font-label-md text-label-md text-on-surface" for="inputEffort">Implementation &amp; Rollout Effort</label>
+<div class="relative">
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest transition-all appearance-none cursor-pointer pr-10" id="inputEffort" onchange="recalculateModel()">
+<option value="Low - 1 Week">Low - 1 Week (Field validation &amp; triggers)</option>
+<option selected="" value="Medium - 3 Weeks">Medium - 3 Weeks (API verification &amp; policy rules)</option>
+<option value="High - 6 Weeks">High - 6 Weeks (Matrix dynamic delegation &amp; full engine)</option>
+<option value="Enterprise Pilot - 10 Weeks">Enterprise Pilot - 10 Weeks (Group-wide orchestration)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 flex items-center justify-between text-on-surface font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span>
+<span>Simulation Parameters Validated</span>
+</div>
+<span class="font-code-md text-code-md text-on-surface-variant">ISO-9001/P2P</span>
+</div>
+</div>
+<!-- RIGHT COLUMN: Dynamic Output Cards & Scenario Comparison (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Output KPI Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-sm">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Requests Affected</span>
+<div class="my-2">
+<span class="font-headline-xl text-headline-xl text-primary font-bold" id="outputAffected">147</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ month</span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">pie_chart</span>
+<span>Based on volume input</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Minutes Saved</span>
+<div class="my-2">
+<span class="font-headline-xl text-headline-xl text-secondary font-bold" id="outputMinutes">7,166</span>
+<span class="font-label-md text-label-md text-on-surface-variant">min / mo</span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span>Reallocated ops time</span>
+</div>
+</div>
+<!-- KPI 3 (Hero KPI) -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between sm:col-span-2 lg:col-span-1 bg-gradient-to-br from-surface-container-lowest to-surface-container-high/40">
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Operational Hours</span>
+<div class="my-2">
+<span class="font-headline-xl text-headline-xl text-primary font-bold" id="outputHours">119.4</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Hrs / mo</span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">trending_up</span>
+<span>Direct capacity gain</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between sm:col-span-1 lg:col-span-2">
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Annual Labor Hours Salvaged</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-code-md text-label-sm">FTE Impact: ~0.83 FTE</span>
+</div>
+<div class="my-2 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-primary font-bold" id="outputAnnual">1,433</span>
+<span class="font-body-lg text-body-lg text-on-surface-variant">Hours / year</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Represents non-value-added administrative re-entry time returned directly to hiring managers and validation officers.
+            </p>
+</div>
+<!-- KPI 5 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between sm:col-span-1 lg:col-span-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">SLA Turnaround</span>
+<div class="my-2">
+<span class="font-headline-xl text-headline-xl text-tertiary font-bold" id="outputSLA">-1.8 Days</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Faster end-to-end</span>
+</div>
+</div>
+<!-- Scenario Comparison Strip -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">stacked_line_chart</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Scenario Sensitivity Comparison</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Variance Envelope</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- Conservative -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Conservative (-20%)</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">shield</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold" id="scenConservative">95.5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">hrs / mo</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Sub-optimal user adoption</span>
+</div>
+<!-- Base Case -->
+<div class="p-space-md rounded-lg bg-surface-container-high flex flex-col gap-1 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-2 h-full bg-secondary"></div>
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Base Case (Target)</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg text-primary font-bold" id="scenBase">119.4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">hrs / mo</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Expected deployment parameters</span>
+</div>
+<!-- Optimistic -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Optimistic (+25%)</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">rocket_launch</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg text-secondary font-bold" id="scenOptimistic">149.3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">hrs / mo</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Complete adoption &amp; zero retries</span>
+</div>
+</div>
+<!-- Inline Comparative Visual SVG Sparkline Chart -->
+<div class="pt-space-xs flex flex-col gap-2">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Cumulative 12-Month Time Salvage Trajectory</span>
+<span class="font-code-md text-code-md text-secondary" id="sparklineMax">Max: 1,791 hrs</span>
+</div>
+<div class="h-16 w-full bg-surface-container-low rounded-lg p-2 flex items-center">
+<svg class="w-full h-full text-secondary overflow-visible" preserveaspectratio="none" viewbox="0 0 500 50">
+<!-- Grid background subtle bars -->
+<line stroke="#E1E7EF" stroke-dasharray="2,2" stroke-width="1" x1="0" x2="500" y1="45" y2="45"></line>
+<line stroke="#E1E7EF" stroke-dasharray="2,2" stroke-width="1" x1="0" x2="500" y1="25" y2="25"></line>
+<!-- Conservative Trajectory -->
+<path d="M 0 45 Q 120 40, 250 32 T 500 24" fill="none" id="svgPathConservative" stroke="#75777e" stroke-dasharray="3,3" stroke-width="1.5"></path>
+<!-- Base Case Trajectory -->
+<path d="M 0 45 Q 120 35, 250 24 T 500 12" fill="none" id="svgPathBase" stroke="#2b5cad" stroke-width="2.5"></path>
+<!-- Optimistic Trajectory -->
+<path d="M 0 45 Q 120 28, 250 16 T 500 4" fill="none" id="svgPathOptimistic" stroke="#16835D" stroke-dasharray="2,2" stroke-width="1.5"></path>
+<!-- Markers -->
+<circle cx="500" cy="12" fill="#2b5cad" r="3.5"></circle>
+</svg>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant font-code-md">
+<span>Month 1 (Rollout)</span>
+<span>Month 6 (Maturity)</span>
+<span>Month 12 (Steady State)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Governance Disclaimer Box -->
+<div class="bg-surface-container-high/40 p-space-md rounded-xl flex items-start gap-space-md">
+<span class="material-symbols-outlined text-[22px] text-tertiary shrink-0 mt-0.5">info</span>
+<div class="flex flex-col gap-0.5 text-on-surface">
+<span class="font-headline-sm text-body-sm font-semibold">Governance &amp; Validation Protocol</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Figures are scenario estimates derived from synthetic historical workflow data. Final operational gains should be validated through a controlled phased pilot overseen by the Emirates P2P Transformation Office.
+        </p>
+</div>
+</div>
+<!-- Bottom Action Bar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" onclick="resetCalculatorDefaults()" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span>Reset to Defaults</span>
+</button>
+<button class="flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" onclick="exportScenarioPDF()" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Export Scenario PDF</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-fixed-variant font-label-md text-label-md shadow-sm transition-all" id="btnSubmitGovernance" onclick="submitToGovernance()" type="button">
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+<span>Submit Recommendation to Governance Committee</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Interactive Modal / Notification Toast (Hidden by default) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 bg-primary text-on-primary px-4 py-3 rounded-xl shadow-lg" id="toastNotification">
+<span class="material-symbols-outlined text-[20px] text-secondary-container" id="toastIcon">check_circle</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-label-md text-on-primary" id="toastTitle">Notification</span>
+<span class="font-body-sm text-body-sm text-on-primary-container" id="toastMsg">Action executed successfully.</span>
+</div>
+</div>
+</div>
+<script>
+  // Core Calculator Logic & Preset Management
+  function recalculateModel() {
+    const volume = parseFloat(document.getElementById('inputVolume').value) || 0;
+    const proportionPct = parseFloat(document.getElementById('inputProportion').value) || 0;
+    const reworkMinutes = parseFloat(document.getElementById('inputReworkMinutes').value) || 0;
+    const efficiencyPct = parseFloat(document.getElementById('inputEfficiency').value) || 0;
+
+    // Update Form Labels
+    document.getElementById('labelVolumeVal').textContent = volume.toLocaleString();
+    document.getElementById('labelProportionVal').textContent = proportionPct + '%';
+    
+    const affectedRequests = Math.round(volume * (proportionPct / 100));
+    document.getElementById('labelProportionDerived').textContent = `(${affectedRequests} requests)`;
+    document.getElementById('labelReworkVal').textContent = reworkMinutes;
+    document.getElementById('labelEfficiencyVal').textContent = efficiencyPct + '%';
+
+    // Core Computations
+    // Total avoidable rework min / mo = affectedRequests * reworkMinutes * (efficiencyPct / 100)
+    const avoidableMinutesSaved = Math.round(affectedRequests * reworkMinutes * (efficiencyPct / 100));
+    const monthlyHoursSaved = Number((avoidableMinutesSaved / 60).toFixed(1));
+    const annualHoursSaved = Math.round(monthlyHoursSaved * 12);
+    
+    // SLA turnaround improvement approximation (scaled with efficiency and rework)
+    const slaDaysSaved = Number(((reworkMinutes / 60) * (efficiencyPct / 100) * 0.9 + 0.3).toFixed(1));
+
+    // Update Output Cards
+    document.getElementById('outputAffected').textContent = affectedRequests.toLocaleString();
+    document.getElementById('outputMinutes').textContent = avoidableMinutesSaved.toLocaleString();
+    document.getElementById('outputHours').textContent = monthlyHoursSaved.toLocaleString();
+    document.getElementById('outputAnnual').textContent = annualHoursSaved.toLocaleString();
+    document.getElementById('outputSLA').textContent = `-${slaDaysSaved} Days`;
+
+    // Scenarios: Conservative (-20%), Optimistic (+25%)
+    const conservativeHours = (monthlyHoursSaved * 0.8).toFixed(1);
+    const optimisticHours = (monthlyHoursSaved * 1.25).toFixed(1);
+
+    document.getElementById('scenConservative').textContent = conservativeHours;
+    document.getElementById('scenBase').textContent = monthlyHoursSaved;
+    document.getElementById('scenOptimistic').textContent = optimisticHours;
+
+    const annualOptimistic = Math.round(optimisticHours * 12);
+    document.getElementById('sparklineMax').textContent = `Max: ${annualOptimistic.toLocaleString()} hrs`;
+  }
+
+  function loadPreset(vol, prop, rework, eff, title, effortVal) {
+    document.getElementById('inputVolume').value = vol;
+    document.getElementById('inputProportion').value = prop;
+    document.getElementById('inputReworkMinutes').value = rework;
+    document.getElementById('inputEfficiency').value = eff;
+    
+    if (effortVal) {
+      const effortSelect = document.getElementById('inputEffort');
+      for (let i = 0; i < effortSelect.options.length; i++) {
+        if (effortSelect.options[i].value.includes(effortVal.split(' ')[0])) {
+          effortSelect.selectedIndex = i;
+          break;
+        }
+      }
+    }
+
+    document.getElementById('activeModelBadge').textContent = title;
+    recalculateModel();
+    scrollToCalculator();
+    showToast('Loaded Scenario Preset', `Applied parameters for: ${title}`);
+  }
+
+  function resetCalculatorDefaults() {
+    document.getElementById('inputVolume').value = 350;
+    document.getElementById('inputProportion').value = 42;
+    document.getElementById('inputReworkMinutes').value = 75;
+    document.getElementById('inputEfficiency').value = 65;
+    document.getElementById('inputEffort').selectedIndex = 1;
+    document.getElementById('activeModelBadge').textContent = 'Baseline Simulation';
+    
+    recalculateModel();
+    showToast('Defaults Restored', 'Model variables reset to baseline configuration.');
+  }
+
+  function scrollToCalculator() {
+    const el = document.getElementById('simulation-calculator');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  function showToast(title, msg) {
+    const toast = document.getElementById('toastNotification');
+    const toastTitle = document.getElementById('toastTitle');
+    const toastMsg = document.getElementById('toastMsg');
+
+    toastTitle.textContent = title;
+    toastMsg.textContent = msg;
+
+    toast.classList.remove('translate-y-20', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-20', 'opacity-0');
+    }, 3800);
+  }
+
+  function exportScenarioPDF() {
+    showToast('Compiling PDF Package', 'Generating high-resolution simulation telemetry memo...');
+    setTimeout(() => {
+      showToast('Export Ready', 'Scenario PDF has been compiled for executive distribution.');
+    }, 1200);
+  }
+
+  function exportFullScenarioReport() {
+    showToast('Exporting Report', 'Gathering evidence recommendations & sensitivity benchmarks...');
+  }
+
+  function submitToGovernance() {
+    const btn = document.getElementById('btnSubmitGovernance');
+    btn.innerHTML = `<span class="material-symbols-outlined text-[18px] animate-spin">sync</span> Submitting...`;
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[18px]">verified</span> Lodged with Governance`;
+      btn.classList.remove('bg-secondary', 'hover:bg-on-secondary-fixed-variant');
+      btn.classList.add('bg-tertiary-container', 'text-on-tertiary');
+      showToast('Recommendation Submitted', 'Logged into Emirates P2P Governance Committee docket with status: Under Review.');
+    }, 1000);
+  }
+
+  // Initial trigger
+  document.addEventListener('DOMContentLoaded', () => {
+    recalculateModel();
+  });
+</script></main></div></body></html>
+

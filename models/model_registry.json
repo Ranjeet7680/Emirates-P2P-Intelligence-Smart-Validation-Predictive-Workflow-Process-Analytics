@@ -1,0 +1,140 @@
+{
+  "models": [
+    {
+      "model_id": "ReturnPredict_v1",
+      "algorithm": "GradientBoostingClassifier",
+      "version": "1.0.0",
+      "target": "was_returned (Request Returned for Rework)",
+      "trained_at": "2026-10-23T16:00:00Z",
+      "feature_version": "v1_submission_cutoff",
+      "features_used": [
+        "request_type",
+        "department",
+        "current_grade",
+        "target_grade",
+        "grade_jump",
+        "is_safety_critical",
+        "lead_time_days",
+        "initial_error_count",
+        "initial_warning_count"
+      ],
+      "metrics": {
+        "target": "was_returned",
+        "cv_roc_auc_mean": 0.6239,
+        "cv_roc_auc_std": 0.0513,
+        "test_roc_auc": 0.6739,
+        "test_pr_auc": 0.5894,
+        "test_precision": 0.6167,
+        "test_recall": 0.4066,
+        "test_f1": 0.4901,
+        "brier_score": 0.2265,
+        "confusion_matrix": [
+          [
+            106,
+            23
+          ],
+          [
+            54,
+            37
+          ]
+        ],
+        "test_samples": 220,
+        "top_features": [
+          {
+            "feature": "lead_time_days",
+            "importance": 0.2869
+          },
+          {
+            "feature": "grade_jump",
+            "importance": 0.1953
+          },
+          {
+            "feature": "is_safety_critical",
+            "importance": 0.0589
+          },
+          {
+            "feature": "target_grade_EK-07",
+            "importance": 0.0509
+          },
+          {
+            "feature": "target_grade_EK-09",
+            "importance": 0.0394
+          },
+          {
+            "feature": "initial_error_count",
+            "importance": 0.0387
+          }
+        ]
+      },
+      "artifact_path": "models/return_risk_model.joblib"
+    },
+    {
+      "model_id": "DelayPredict_v1",
+      "algorithm": "RandomForestClassifier",
+      "version": "1.0.0",
+      "target": "is_delayed (Request Exceeds 5-Day SLA)",
+      "trained_at": "2026-10-23T16:00:00Z",
+      "feature_version": "v1_submission_cutoff",
+      "features_used": [
+        "request_type",
+        "department",
+        "current_grade",
+        "target_grade",
+        "grade_jump",
+        "is_safety_critical",
+        "lead_time_days",
+        "initial_error_count",
+        "initial_warning_count"
+      ],
+      "metrics": {
+        "target": "is_delayed",
+        "cv_roc_auc_mean": 0.4334,
+        "cv_roc_auc_std": 0.0291,
+        "test_roc_auc": 0.5396,
+        "test_pr_auc": 0.8424,
+        "test_precision": 0.8,
+        "test_recall": 1.0,
+        "test_f1": 0.8889,
+        "brier_score": 0.1597,
+        "confusion_matrix": [
+          [
+            0,
+            44
+          ],
+          [
+            0,
+            176
+          ]
+        ],
+        "test_samples": 220,
+        "top_features": [
+          {
+            "feature": "lead_time_days",
+            "importance": 0.1978
+          },
+          {
+            "feature": "grade_jump",
+            "importance": 0.0614
+          },
+          {
+            "feature": "initial_error_count",
+            "importance": 0.0467
+          },
+          {
+            "feature": "department_Engineering & Maintenance",
+            "importance": 0.0398
+          },
+          {
+            "feature": "request_type_Position-to-Person Assignment",
+            "importance": 0.0364
+          },
+          {
+            "feature": "target_grade_EK-08",
+            "importance": 0.0364
+          }
+        ]
+      },
+      "artifact_path": "models/delay_risk_model.joblib"
+    }
+  ]
+}

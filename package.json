@@ -1,0 +1,22 @@
+{
+  "name": "emirates-p2p-intelligence",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Emirates P2P Intelligence — Smart Validation & Predictive Workflow Process Analytics Platform",
+  "scripts": {
+    "build": "npm run build --prefix frontend",
+    "dev": "npm run dev --prefix frontend",
+    "preview": "npm run preview --prefix frontend"
+  },
+  "keywords": [
+    "emirates",
+    "p2p",
+    "procure-to-pay",
+    "process-mining",
+    "smart-validation",
+    "bpi-challenge-2019",
+    "machine-learning"
+  ],
+  "author": "Emirates Group Digital Transformation Engineering Team",
+  "license": "MIT"
+}

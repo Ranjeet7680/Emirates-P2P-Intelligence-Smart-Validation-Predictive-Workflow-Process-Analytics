@@ -1,0 +1,75 @@
+# Large Event Datasets (Exceeding GitHub 100MB limit)
+BPIChallenge2019CSV/*.csv
+*.csv.gz
+*.zip
+*.tar.gz
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+medipredict/frontend/node_modules/
+.pnp
+.pnp.js
+
+# Python Cache & Virtual Environments
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & Linting
+.pytest_cache/
+**/.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Build Outputs
+frontend/dist/
+medipredict/frontend/dist/
+.next/
+out/
+
+# Local Databases & Dynamic Uploads
+*.db
+*.sqlite3
+**/uploads/*
+!**/uploads/.gitkeep
+
+# Environment & Secret Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Operating System & IDE Artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*.log

@@ -1,0 +1,122 @@
+[
+  {
+    "test_name": "Fasting Plasma Glucose",
+    "category": "Metabolic",
+    "units": "mg/dL",
+    "ref_low": 70.0,
+    "ref_high": 99.0,
+    "critical_low": 50.0,
+    "critical_high": 300.0,
+    "interpretation": "Fasting values between 100-125 mg/dL indicate impaired fasting glucose (prediabetes); >= 126 mg/dL on repeated testing suggests diabetes."
+  },
+  {
+    "test_name": "Hemoglobin A1c",
+    "category": "Metabolic",
+    "units": "%",
+    "ref_low": 4.0,
+    "ref_high": 5.6,
+    "critical_low": 3.5,
+    "critical_high": 13.0,
+    "interpretation": "Values 5.7-6.4% reflect increased diabetes risk; >= 6.5% diagnostic for diabetes."
+  },
+  {
+    "test_name": "Total Cholesterol",
+    "category": "Lipids",
+    "units": "mg/dL",
+    "ref_low": 120.0,
+    "ref_high": 199.0,
+    "critical_low": 80.0,
+    "critical_high": 350.0,
+    "interpretation": "Desirable < 200 mg/dL; elevated levels contribute to atherosclerotic cardiovascular risk."
+  },
+  {
+    "test_name": "LDL Cholesterol",
+    "category": "Lipids",
+    "units": "mg/dL",
+    "ref_low": 50.0,
+    "ref_high": 99.0,
+    "critical_low": 25.0,
+    "critical_high": 250.0,
+    "interpretation": "Primary atherogenic particle. Target depends on cardiovascular risk tier (high-risk goal < 70 or < 55 mg/dL)."
+  },
+  {
+    "test_name": "HDL Cholesterol",
+    "category": "Lipids",
+    "units": "mg/dL",
+    "ref_low": 40.0,
+    "ref_high": 80.0,
+    "critical_low": 20.0,
+    "critical_high": 120.0,
+    "interpretation": "Values < 40 mg/dL in men or < 50 mg/dL in women are independent cardiovascular risk markers."
+  },
+  {
+    "test_name": "Triglycerides",
+    "category": "Lipids",
+    "units": "mg/dL",
+    "ref_low": 40.0,
+    "ref_high": 149.0,
+    "critical_low": 20.0,
+    "critical_high": 500.0,
+    "interpretation": "Normal < 150 mg/dL; > 500 mg/dL elevates acute pancreatitis risk."
+  },
+  {
+    "test_name": "Serum Creatinine",
+    "category": "Renal",
+    "units": "mg/dL",
+    "ref_low": 0.6,
+    "ref_high": 1.2,
+    "critical_low": 0.3,
+    "critical_high": 4.0,
+    "interpretation": "Key surrogate for glomerular filtration. Must be interpreted with age, sex, and muscle mass."
+  },
+  {
+    "test_name": "eGFR (CKD-EPI)",
+    "category": "Renal",
+    "units": "mL/min/1.73m2",
+    "ref_low": 60.0,
+    "ref_high": 120.0,
+    "critical_low": 15.0,
+    "critical_high": 150.0,
+    "interpretation": "< 60 mL/min for > 3 months indicates chronic kidney disease."
+  },
+  {
+    "test_name": "High-Sensitivity Troponin I",
+    "category": "Cardiac",
+    "units": "ng/L",
+    "ref_low": 0.0,
+    "ref_high": 14.0,
+    "critical_low": 0.0,
+    "critical_high": 50.0,
+    "interpretation": "Marker of myocardial injury. Values > 99th percentile upper reference limit require acute coronary syndrome evaluation."
+  },
+  {
+    "test_name": "Thyroid Stimulating Hormone (TSH)",
+    "category": "Endocrine",
+    "units": "uIU/mL",
+    "ref_low": 0.45,
+    "ref_high": 4.5,
+    "critical_low": 0.05,
+    "critical_high": 20.0,
+    "interpretation": "Primary screening test for thyroid dysfunction. High TSH indicates primary hypothyroidism; low TSH indicates hyperthyroidism."
+  },
+  {
+    "test_name": "Hemoglobin",
+    "category": "Hematology",
+    "units": "g/dL",
+    "ref_low": 12.0,
+    "ref_high": 17.5,
+    "critical_low": 7.0,
+    "critical_high": 20.0,
+    "interpretation": "Values < 12 g/dL in women or < 13.5 g/dL in men define anemia."
+  },
+  {
+    "test_name": "White Blood Cell Count",
+    "category": "Hematology",
+    "units": "10^3/uL",
+    "ref_low": 4.5,
+    "ref_high": 11.0,
+    "critical_low": 2.0,
+    "critical_high": 30.0,
+    "interpretation": "Elevated in infection, inflammation, or leukemoid reaction; depressed in bone marrow suppression."
+  }
+]

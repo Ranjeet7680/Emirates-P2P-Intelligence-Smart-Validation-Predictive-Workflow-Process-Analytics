@@ -1,0 +1,245 @@
+[
+  {
+    "id": "DIS-001",
+    "name": "Type 2 Diabetes Mellitus",
+    "icd11": "5A11",
+    "specialty": "Endocrinology",
+    "overview": "A chronic metabolic disorder characterized by persistent hyperglycemia resulting from progressive insulin secretion defect on the background of insulin resistance.",
+    "symptoms": [
+      "Polyuria",
+      "Polydipsia",
+      "Unexplained weight loss",
+      "Fatigue",
+      "Blurred vision",
+      "Slow-healing sores"
+    ],
+    "risk_factors": [
+      "BMI >= 25 kg/m2",
+      "Physical inactivity",
+      "First-degree relative with T2D",
+      "Hypertension (>=140/90 mmHg)",
+      "HDL < 35 mg/dL or Triglycerides > 250 mg/dL",
+      "History of GDM"
+    ],
+    "pathophysiology": "Combination of peripheral tissue insulin resistance in muscle, liver, and adipose tissue coupled with beta-cell secretory dysfunction and incretin deficiency.",
+    "diagnostic_tests": [
+      "Fasting Plasma Glucose (>= 126 mg/dL)",
+      "HbA1c (>= 6.5%)",
+      "2-hour 75g OGTT (>= 200 mg/dL)",
+      "Random Plasma Glucose >= 200 mg/dL with classic symptoms"
+    ],
+    "prevention": [
+      "Moderate weight reduction of 7-10%",
+      "150 min/week moderate-intensity aerobic physical activity",
+      "Mediterranean or DASH dietary pattern"
+    ],
+    "research_summary": "Current clinical trials focus on dual SGLT2i and GLP-1 RA cardio-renal protection and early intensive glycemic therapy to preserve beta-cell mass.",
+    "pubmed_references": [
+      {
+        "pmid": "34972175",
+        "title": "Management of Hyperglycemia in Type 2 Diabetes: ADA/EASD Consensus Report",
+        "year": 2022,
+        "doi": "10.2337/dci22-0034"
+      },
+      {
+        "pmid": "31478149",
+        "title": "SGLT2 Inhibitors and Cardiovascular Outcomes in Type 2 Diabetes",
+        "year": 2019,
+        "doi": "10.1016/S1474-4422(19)30283-X"
+      }
+    ],
+    "evidence_quality": "High (Level A)",
+    "last_updated": "2026-04-15"
+  },
+  {
+    "id": "DIS-002",
+    "name": "Atherosclerotic Cardiovascular Disease (ASCVD)",
+    "icd11": "BA80",
+    "specialty": "Cardiology",
+    "overview": "Progressive lipid-driven arterial disease resulting in plaque formation, luminal narrowing, endothelial dysfunction, and potential acute coronary syndromes.",
+    "symptoms": [
+      "Exertional angina",
+      "Shortness of breath (dyspnea)",
+      "Pain radiating to arm or jaw",
+      "Cold diaphoresis",
+      "Fatigue"
+    ],
+    "risk_factors": [
+      "Elevated ApoB/LDL-C",
+      "Hypertension",
+      "Tobacco smoking",
+      "Diabetes mellitus",
+      "Elevated Lipoprotein(a)",
+      "Chronic kidney disease"
+    ],
+    "pathophysiology": "Subendothelial retention of apolipoprotein B-containing lipoproteins inciting inflammatory foam cell transformation, necrotic core expansion, and fibrous cap thinning.",
+    "diagnostic_tests": [
+      "High-sensitivity Cardiac Troponin I/T",
+      "Coronary Artery Calcium (CAC) Scoring",
+      "Electrocardiogram (ECG)",
+      "Coronary CT Angiography (CCTA)"
+    ],
+    "prevention": [
+      "Aggressive LDL-C lowering with statin +/- ezetimibe/PCSK9i",
+      "BP target < 130/80 mmHg",
+      "Smoking cessation",
+      "Antiplatelet therapy where indicated"
+    ],
+    "research_summary": "Recent trials highlight residual inflammatory risk reduction using low-dose colchicine and RNA-targeting siRNA therapies against Lp(a).",
+    "pubmed_references": [
+      {
+        "pmid": "31464871",
+        "title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+        "year": 2020,
+        "doi": "10.1093/eurheartj/ehz455"
+      },
+      {
+        "pmid": "31733140",
+        "title": "Efficacy and Safety of Low-Dose Colchicine in Patients with CAD (COLCOT)",
+        "year": 2019,
+        "doi": "10.1056/NEJMoa1912388"
+      }
+    ],
+    "evidence_quality": "High (Level A)",
+    "last_updated": "2026-05-10"
+  },
+  {
+    "id": "DIS-003",
+    "name": "Chronic Kidney Disease (CKD)",
+    "icd11": "GB61",
+    "specialty": "Nephrology",
+    "overview": "Abnormalities of kidney structure or function persisting for >3 months, staged by glomerular filtration rate (GFR G1-G5) and albuminuria categories (A1-A3).",
+    "symptoms": [
+      "Peripheral edema",
+      "Nocturia",
+      "Hematuria/frothy urine",
+      "Anorexia and nausea in late stages",
+      "Hypertension"
+    ],
+    "risk_factors": [
+      "Diabetes mellitus (diabetic nephropathy)",
+      "Hypertension",
+      "Glomerulonephritis",
+      "Polycystic kidney disease",
+      "Frequent NSAID use"
+    ],
+    "pathophysiology": "Loss of functional nephron mass inducing compensatory hyperfiltration, intraglomerular hypertension, podocyte detachment, and progressive tubulointerstitial fibrosis.",
+    "diagnostic_tests": [
+      "Serum Creatinine with eGFR (CKD-EPI 2021 formula)",
+      "Urine Albumin-to-Creatinine Ratio (uACR)",
+      "Renal Ultrasonography",
+      "Electrolytes & Bicarbonate"
+    ],
+    "prevention": [
+      "RAS blockade (ACEi/ARB) for albuminuria",
+      "SGLT2 inhibitors (Dapagliflozin/Empagliflozin)",
+      "Non-steroidal MRA (Finerenone)",
+      "BP control"
+    ],
+    "research_summary": "Breakthrough cardio-renal outcome trials (DAPA-CKD, EMPA-KIDNEY, FIDELIO-DKD) have redefined renal preservation standards beyond glycemic control.",
+    "pubmed_references": [
+      {
+        "pmid": "32970396",
+        "title": "Dapagliflozin in Patients with Chronic Kidney Disease (DAPA-CKD)",
+        "year": 2020,
+        "doi": "10.1056/NEJMoa2024816"
+      },
+      {
+        "pmid": "36331190",
+        "title": "Empagliflozin in Patients with Chronic Kidney Disease (EMPA-KIDNEY)",
+        "year": 2023,
+        "doi": "10.1056/NEJMoa2204233"
+      }
+    ],
+    "evidence_quality": "High (Level A)",
+    "last_updated": "2026-06-01"
+  },
+  {
+    "id": "DIS-004",
+    "name": "Primary Hypertension",
+    "icd11": "BA00",
+    "specialty": "Cardiology",
+    "overview": "Sustained systemic arterial blood pressure >= 130/80 mmHg (ACC/AHA) or >= 140/90 mmHg (ESC) without an identifiable secondary cause.",
+    "symptoms": [
+      "Often asymptomatic (Silent Killer)",
+      "Occipital morning headache in severe cases",
+      "Epistaxis",
+      "Visual disturbances in hypertensive emergencies"
+    ],
+    "risk_factors": [
+      "High sodium intake (>2g/day)",
+      "Excess alcohol intake",
+      "Obesity",
+      "Physical inactivity",
+      "Aging",
+      "Family history"
+    ],
+    "pathophysiology": "Multifactorial dysregulation of vascular resistance, renal sodium excretion, sympathetic nervous system hyperactivity, and the renin-angiotensin-aldosterone cascade.",
+    "diagnostic_tests": [
+      "24-hour Ambulatory Blood Pressure Monitoring (ABPM)",
+      "Home Blood Pressure Monitoring (HBPM)",
+      "Basic Metabolic Panel",
+      "Urinalysis for microalbuminuria"
+    ],
+    "prevention": [
+      "DASH diet (rich in fruits, vegetables, low-fat dairy)",
+      "Sodium restriction to < 2,300 mg/day",
+      "Regular aerobic exercise",
+      "Stress management"
+    ],
+    "research_summary": "SPRINT and STEP trials demonstrate significant cardiovascular mortality reduction with intensive systolic blood pressure targets (< 120-130 mmHg).",
+    "pubmed_references": [
+      {
+        "pmid": "26551272",
+        "title": "A Randomized Trial of Intensive versus Standard Blood-Pressure Control (SPRINT)",
+        "year": 2015,
+        "doi": "10.1056/NEJMoa1511939"
+      }
+    ],
+    "evidence_quality": "High (Level A)",
+    "last_updated": "2026-03-20"
+  },
+  {
+    "id": "DIS-005",
+    "name": "Hashimoto Thyroiditis",
+    "icd11": "5A00.1",
+    "specialty": "Endocrinology",
+    "overview": "Autoimmune destruction of thyroid follicular cells leading to chronic lymphocytic thyroiditis and progressive primary hypothyroidism.",
+    "symptoms": [
+      "Fatigue and lethargy",
+      "Cold intolerance",
+      "Constipation",
+      "Dry coarse skin",
+      "Weight gain with poor appetite",
+      "Periorbital puffiness"
+    ],
+    "risk_factors": [
+      "Female sex (5-10:1 ratio)",
+      "Family history of autoimmune disease",
+      "High dietary iodine intake",
+      "Postpartum period",
+      "HLA-DR3/DR5 alleles"
+    ],
+    "pathophysiology": "T cell-mediated cytotoxicity and anti-thyroid peroxidase (TPO) and anti-thyroglobulin (Tg) autoantibodies causing follicular architecture destruction and Hurthle cell metaplasia.",
+    "diagnostic_tests": [
+      "Serum TSH (elevated)",
+      "Free T4 (low in overt, normal in subclinical)",
+      "Serum Anti-TPO antibodies",
+      "Thyroid Ultrasonography"
+    ],
+    "prevention": [
+      "No known prevention; managed with lifelong weight-adjusted levothyroxine monotherapy with periodic TSH monitoring."
+    ],
+    "research_summary": "Current investigations assess the immunomodulatory effects of selenium supplementation and combination T4/T3 therapy in patients with persistent symptoms.",
+    "pubmed_references": [
+      {
+        "pmid": "25114073",
+        "title": "2014 Guidelines for the Treatment of Hypothyroidism",
+        "year": 2014,
+        "doi": "10.1089/thy.2014.0028"
+      }
+    ],
+    "evidence_quality": "Moderate (Level B)",
+    "last_updated": "2026-02-15"
+  }
+]

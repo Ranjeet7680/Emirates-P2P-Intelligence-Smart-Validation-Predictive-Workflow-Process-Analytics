@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="matchBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040815" />
+      <stop offset="50%" stop-color="#091428" />
+      <stop offset="100%" stop-color="#040916" />
+    </linearGradient>
+
+    <linearGradient id="hubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E1B4B" />
+    </linearGradient>
+
+    <linearGradient id="redAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D71921" />
+      <stop offset="100%" stop-color="#FF4D58" />
+    </linearGradient>
+
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+
+    <filter id="hubGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes radarSweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes dashInflow {
+        to { stroke-dashoffset: -100; }
+      }
+      @keyframes badgePulse {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.4)); }
+        50% { transform: scale(1.05); filter: drop-shadow(0 0 12px rgba(16, 185, 129, 0.8)); }
+      }
+      .inflow-line { stroke-dasharray: 8 6; animation: dashInflow 3s linear infinite; }
+      .radar-arm { transform-origin: 525px 260px; animation: radarSweep 10s linear infinite; }
+      .pulse-pill { animation: badgePulse 3s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1050" height="520" rx="16" fill="url(#matchBg)" stroke="#1E293B" stroke-width="1.2" />
+
+  <!-- Grid Pattern -->
+  <g opacity="0.07" stroke="#38BDF8" stroke-width="0.8">
+    <circle cx="525" cy="260" r="80" fill="none" />
+    <circle cx="525" cy="260" r="160" fill="none" />
+    <circle cx="525" cy="260" r="240" fill="none" />
+    <line x1="525" y1="20" x2="525" y2="500" />
+    <line x1="25" y1="260" x2="1025" y2="260" />
+  </g>
+
+  <!-- Title Header -->
+  <g transform="translate(50, 45)">
+    <rect width="40" height="40" rx="10" fill="#132342" stroke="#233B6E" stroke-width="1" />
+    <text x="20" y="26" fill="#D71921" font-family="sans-serif" font-size="20" font-weight="900" text-anchor="middle">⚖️</text>
+    <text x="54" y="20" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="800">
+      AUTONOMOUS 3-WAY SMART MATCHING ENGINE
+    </text>
+    <text x="54" y="38" fill="#64748B" font-family="sans-serif" font-size="12" font-weight="500">
+      Multi-Dimensional Cross-Verification: Purchase Order ↔ Goods Receipt (GRN) ↔ Invoiced Billing
+    </text>
+  </g>
+
+  <!-- Real-Time Radar Sweep Beam -->
+  <g class="radar-arm" opacity="0.4">
+    <path d="M 525,260 L 680,180 A 180 180 0 0 1 700,260 Z" fill="url(#emeraldGrad)" opacity="0.25" />
+    <line x1="525" y1="260" x2="705" y2="260" stroke="#10B981" stroke-width="2" />
+  </g>
+
+  <!-- Connecting Inflow Paths to Central Hub -->
+  <!-- Top PO to Hub -->
+  <path d="M 230,195 L 430,240" fill="none" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" class="inflow-line" />
+  <!-- Bottom GRN to Hub -->
+  <path d="M 230,355 L 430,280" fill="none" stroke="#F59E0B" stroke-width="3" stroke-linecap="round" class="inflow-line" />
+  <!-- Right Invoice to Hub -->
+  <path d="M 820,260 L 620,260" fill="none" stroke="#D71921" stroke-width="3" stroke-linecap="round" class="inflow-line" />
+
+  <!-- ==================== NODE 1: PURCHASE ORDER (PO) ==================== -->
+  <g transform="translate(50, 120)">
+    <rect width="210" height="135" rx="12" fill="#0C1A32" stroke="#38BDF8" stroke-width="1.5" />
+    <rect x="14" y="14" width="24" height="24" rx="6" fill="#1A3158" />
+    <text x="26" y="30" fill="#38BDF8" font-family="monospace" font-size="12" font-weight="800" text-anchor="middle">PO</text>
+    <text x="46" y="30" fill="#E2E8F0" font-family="sans-serif" font-size="13" font-weight="700">Purchase Order</text>
+
+    <g transform="translate(14, 52)" font-family="sans-serif" font-size="10.5">
+      <text y="0" fill="#64748B">Contract Line Items: <tspan fill="#F8FAFC" font-weight="600">25 Units</tspan></text>
+      <text y="20" fill="#64748B">Agreed Unit Price: <tspan fill="#F8FAFC" font-weight="600">$1,450.00</tspan></text>
+      <text y="40" fill="#64748B">Approved CapEx: <tspan fill="#38BDF8" font-mono font-weight="700">$36,250.00</tspan></text>
+      <text y="60" fill="#64748B">Status: <tspan fill="#10B981" font-weight="700">RELEASED &amp; LOCKED</tspan></text>
+    </g>
+  </g>
+
+  <!-- ==================== NODE 2: GOODS RECEIPT (GRN) ==================== -->
+  <g transform="translate(50, 290)">
+    <rect width="210" height="135" rx="12" fill="#0C1A32" stroke="#F59E0B" stroke-width="1.5" />
+    <rect x="14" y="14" width="24" height="24" rx="6" fill="#2E2412" />
+    <text x="26" y="30" fill="#F59E0B" font-family="monospace" font-size="12" font-weight="800" text-anchor="middle">GR</text>
+    <text x="46" y="30" fill="#E2E8F0" font-family="sans-serif" font-size="13" font-weight="700">Goods Receipt Note</text>
+
+    <g transform="translate(14, 52)" font-family="sans-serif" font-size="10.5">
+      <text y="0" fill="#64748B">Physical Delivered: <tspan fill="#F8FAFC" font-weight="600">25 Units</tspan></text>
+      <text y="20" fill="#64748B">Quality Inspection: <tspan fill="#10B981" font-weight="700">100% PASSED</tspan></text>
+      <text y="40" fill="#64748B">Warehouse Gate: <tspan fill="#F59E0B" font-mono font-weight="600">DXB-Hangar 8</tspan></text>
+      <text y="60" fill="#64748B">GRN Lot Stamp: <tspan fill="#38BDF8" font-mono>GRN-2026-9041</tspan></text>
+    </g>
+  </g>
+
+  <!-- ==================== NODE 3: VENDOR INVOICE ==================== -->
+  <g transform="translate(790, 195)">
+    <rect width="210" height="150" rx="12" fill="#0C1A32" stroke="#D71921" stroke-width="1.5" />
+    <rect x="14" y="14" width="24" height="24" rx="6" fill="#331015" />
+    <text x="26" y="30" fill="#FF4D58" font-family="monospace" font-size="12" font-weight="800" text-anchor="middle">INV</text>
+    <text x="46" y="30" fill="#E2E8F0" font-family="sans-serif" font-size="13" font-weight="700">Vendor Invoice</text>
+
+    <g transform="translate(14, 52)" font-family="sans-serif" font-size="10.5">
+      <text y="0" fill="#64748B">OCR Extracted Total: <tspan fill="#F8FAFC" font-weight="700">$36,250.00</tspan></text>
+      <text y="20" fill="#64748B">Billed Quantity: <tspan fill="#F8FAFC" font-weight="600">25 Units</tspan></text>
+      <text y="40" fill="#64748B">Tax ID &amp; IBAN: <tspan fill="#10B981" font-weight="700">MATCHED</tspan></text>
+      <text y="60" fill="#64748B">Invoice No: <tspan fill="#38BDF8" font-mono>INV-EMR-88219</tspan></text>
+      <text y="80" fill="#64748B">Payment Terms: <tspan fill="#F59E0B">Net 30 (2% 10d)</tspan></text>
+    </g>
+  </g>
+
+  <!-- ==================== CENTRAL MATCHING AI HUB ==================== -->
+  <g transform="translate(525, 260)">
+    <!-- Outer Glow Rings -->
+    <circle cx="0" cy="0" r="95" fill="none" stroke="#1E2E4E" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="85" fill="url(#hubGrad)" stroke="#10B981" stroke-width="2.5" filter="url(#hubGlow)" />
+    
+    <!-- Inner Telemetry -->
+    <text x="0" y="-35" fill="#38BDF8" font-family="sans-serif" font-size="10.5" font-weight="800" text-anchor="middle" letter-spacing="1">
+      AI TRIAGE ENGINE
+    </text>
+    
+    <text x="0" y="-6" fill="#10B981" font-family="monospace" font-size="28" font-weight="900" text-anchor="middle">
+      99.8%
+    </text>
+    <text x="0" y="14" fill="#A7F3D0" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle">
+      CONFIDENCE MATCH
+    </text>
+
+    <!-- Verified Metric Checkbox -->
+    <g transform="translate(0, 42)">
+      <rect x="-65" y="-12" width="130" height="24" rx="12" fill="#0F2B26" stroke="#10B981" stroke-width="1" class="pulse-pill" />
+      <text x="0" y="4" fill="#34D399" font-family="sans-serif" font-size="10.5" font-weight="800" text-anchor="middle">
+        ✓ ZERO VARIANCE
+      </text>
+    </g>
+  </g>
+
+  <!-- Exit Pipeline: Auto-Clearance vs Exception -->
+  <g transform="translate(525, 430)">
+    <!-- Pass Outcome -->
+    <g transform="translate(-160, 0)">
+      <rect width="140" height="36" rx="8" fill="#0A2A20" stroke="#10B981" stroke-width="1.2" />
+      <text x="70" y="22" fill="#34D399" font-family="sans-serif" font-size="11" font-weight="800" text-anchor="middle">
+        ➔ Auto-Post to SAP
+      </text>
+    </g>
+    <!-- Exception Outcome -->
+    <g transform="translate(20, 0)">
+      <rect width="150" height="36" rx="8" fill="#280C12" stroke="#D71921" stroke-width="1.2" />
+      <text x="75" y="22" fill="#FF8A92" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">
+        ⚠️ Triage to Approver
+      </text>
+    </g>
+  </g>
+</svg>

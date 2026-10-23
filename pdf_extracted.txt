@@ -1,0 +1,703 @@
+=== PAGE 1 ===
+EMIRATES P2P INTELLIGENCE
+ Smart Validation, Predictive Workflow
+ & HR Process Analytics
+ Solution Architecture & Implementation Blueprint
+A prototype design for improving Position-to-Person request quality, workflow transparency, delay prediction and process
+improvement.
+Purpose
+Challenge submission blueprint; technical and product architecture
+Data posture
+Synthetic data only; no connection to live HR systems
+Decision model
+AI recommends and explains; authorised humans retain approval authority
+Suggested stack
+Next.js / React, FastAPI, Python, scikit-learn, SQLite/PostgreSQL, Plotly, Docker
+Prepared as a practical architecture blueprint. Operational metrics and policy rules must be calculated from, and validated against, the
+organiser-provided synthetic pack.
+
+=== PAGE 2 ===
+Emirates P2P Intelligence | Architecture Blueprint
+Page 2
+Contents
+●
+1. Executive summary
+●
+2. Problem framing and outcomes
+●
+3. Scope, assumptions and non-goals
+●
+4. Users and core journeys
+●
+5. Functional requirements
+●
+6. High-level architecture
+●
+7. Component architecture
+●
+8. Data architecture and data contracts
+●
+9. Submission validation engine
+●
+10. Workflow state and status tracking
+●
+11. Predictive analytics and responsible ML
+●
+12. Process mining and bottleneck discovery
+●
+13. Recommendation and savings engine
+●
+14. API design
+●
+15. User experience and dashboard design
+●
+16. Security, privacy and governance
+●
+17. Observability, testing and quality
+●
+18. Deployment architecture
+●
+19. Implementation roadmap
+●
+20. Evaluation plan and judging alignment
+●
+21. Three-minute demo plan
+●
+22. Risks and mitigations
+●
+23. Solution note draft
+●
+24. Appendix: sample schemas and acceptance criteria
+Document note: A 100,000-word specification is book-length and is not practical as a single challenge
+deliverable. This PDF provides a detailed, implementation-oriented architecture blueprint suitable for
+expanding into a larger technical specification.
+
+=== PAGE 3 ===
+Emirates P2P Intelligence | Architecture Blueprint
+Page 3
+1. Executive summary
+Overview
+Emirates P2P Intelligence is a decision-support prototype for Position-to-Person workflows. It combines rule-based
+validation at submission, transparent request tracking, predictive risk indicators, event-log analytics and evidence-backed
+process recommendations. The objective is not to replace HR judgement or automate approvals. The objective is to help
+users submit complete requests, make ownership and next actions visible, and help process owners understand why
+work waits or returns.
+Why this approach
+The challenge has five scoring dimensions. Entry validation and prediction together address the largest 30% criterion;
+event-log analysis addresses 25%; user experience addresses 15%; governance addresses 15%; and deployment
+readiness addresses 15%. A strong prototype should therefore make its rules, evidence, metrics and limitations
+visible—not simply present a polished chat interface.
+Product principle
+Use deterministic rules where the policy is known, machine learning where historical patterns add value, and human
+review where interpretation or authority is required. Every risk prediction should expose its target, score, leading factors
+and recommended next step.
+2. Problem framing and outcomes
+Current pain points
+Requests may arrive incomplete or inconsistent; approval routes and prerequisites can be misunderstood; managers
+may not know who owns the next step; HR teams manually validate and chase requests; and process owners may lack
+an evidence-based view of delays and loops. These are related but distinct problems and should be measured
+separately.
+Target outcomes
+Accuracy: increase the share of requests that pass first-line validation. Transparency: show status, owner, age, next
+action and target time. Prediction: identify in-flight requests at elevated risk of return or target-time breach. Process
+improvement: quantify common wait states and return loops, then estimate the impact of specific interventions.
+Governance: preserve human authority and an auditable history.
+North-star metrics
+The primary operational measures should be first-time-right rate, avoidable return rate, median end-to-end elapsed time,
+90th-percentile elapsed time, stage-level wait time, target-time breach rate and manual follow-up burden. Define every
+metric before building charts so the same term means the same thing across the product.
+3. Scope, assumptions and non-goals
+In scope
+A working prototype using the supplied synthetic files; guided forms for the request types represented in the process
+map; validation based on the supplied rules; simulated workflow status; delay and return prediction; event-log analysis;
+evidence-linked recommendations; CSV export for test-set predictions; audit events; and a documented deployment
+pattern.
+
+=== PAGE 4 ===
+Emirates P2P Intelligence | Architecture Blueprint
+Page 4
+Out of scope
+Live HR system integration; real employee data; automatic approval, rejection or employee-impacting decisions;
+inventing undocumented Emirates policies; production identity federation; and claiming live status when the prototype is
+using static or simulated events.
+Assumptions to verify
+The organiser will provide stable request identifiers, event timestamps, request-type definitions, target times, validation
+rules and outcome labels. Monthly request volume is not yet confirmed. Where a value is missing, label it as an
+assumption and do not present it as a fact. If fields or labels differ from the examples in this blueprint, adapt the data
+contract to the actual pack.
+4. Users and core journeys
+Line manager journey
+The manager chooses a request type, receives a form tailored to that type, sees required-field and rule checks as they
+work, corrects issues before submission, receives a request reference and can later see status, current owner, time in
+stage and next action. The interface should use plain language and avoid showing unnecessary organisational data.
+HR operations journey
+The HR specialist views a queue of requests, filters by status and risk, inspects validation findings and prerequisite
+dependencies, sees why a request is flagged, records an action or exception, and follows a consistent audit trail. The
+system should reduce repetitive checking without hiding unusual cases that require expert judgement.
+Process owner journey
+The process owner sees stage-level duration distributions, return reasons, repeated loops, route variation and target-time
+breaches. Each insight links to supporting event counts and examples. Recommendations show a baseline, an
+intervention assumption, a projected effect and a confidence or evidence-strength label.
+Core workflow
+Draft → Validate → Submit → Queue for review → Human decision / processing → Complete or Return for correction. A
+returned request should preserve the previous history, record the reason and return to a defined state. The prototype
+must not silently rewrite or erase prior events.
+5. Functional requirements
+FR-01: guided request creation
+Support the request types defined by the process map. Display only fields relevant to the selected type. Distinguish
+required, optional and conditionally required fields. Save drafts locally or in the prototype database if draft persistence is
+implemented.
+FR-02: validation feedback
+Run client-side checks for immediate usability and repeat all authoritative checks on the server. Return a stable rule
+identifier, severity, human-readable explanation, affected field and suggested correction. A client must not be able to
+bypass server-side validation.
+
+=== PAGE 5 ===
+Emirates P2P Intelligence | Architecture Blueprint
+Page 5
+FR-03: status and ownership
+Every submitted request has a unique identifier and a current workflow state. The details view includes stage, current
+owner role/team where known, entry timestamp, elapsed time, target time, next action and event history. If the owner is
+unknown, show 'Owner not identified' rather than guessing.
+FR-04: risk predictions
+Provide separate outputs for return risk and delay risk. Each output includes model version, prediction timestamp,
+probability or risk band, main evidence, data limitations and a suggested review action. Predictions must not themselves
+change workflow state.
+FR-05: process analytics
+Reconstruct request paths, compute durations, count returns and loops, compare paths with the documented process
+and show filters for request type, stage, team and time period.
+FR-06: improvement recommendations
+Generate recommendations from explicit rules or analysed evidence. Each recommendation must include the observed
+issue, supporting metrics, proposed change, estimated time saved, calculation assumptions, implementation effort and
+risk or dependency.
+FR-07: audit and export
+Record relevant user actions and system decisions. Export predictions and aggregate process findings to CSV. Avoid
+exporting unnecessary personal or sensitive fields; use synthetic identifiers in the challenge prototype.
+6. High-level architecture
+Architecture overview
+Use a modular web application with a React/Next.js user interface, a FastAPI backend, a relational data store, an
+analytics pipeline and a model artefact store. Keep business rules and prediction logic in separate modules so that rules
+can be tested deterministically and models can be replaced without redesigning the user interface.
+Logical flow
+Browser → API gateway / FastAPI routes → authentication and role checks → application services → validation /
+workflow / prediction / analytics modules → relational database and model artefacts. A batch ingestion job loads synthetic
+CSV files, validates their schemas and prepares curated tables. Analytics jobs generate materialised summaries for
+dashboard views.
+Architecture diagram (text)
+Manager / HR / Process Owner
+↓
+Next.js UI — request forms, tracking, dashboard, prediction centre
+↓ HTTPS / JSON
+FastAPI application — request API, validation service, workflow service, prediction service, analytics service, audit
+service
+↓
+Data layer — SQLite for local demo / PostgreSQL for pilot; versioned CSV inputs; model artefacts; generated reports
+↓
+Offline analytics pipeline — schema checks, feature creation, model evaluation, event-log reconstruction, bottleneck
+metrics, recommendations
+
+=== PAGE 6 ===
+Emirates P2P Intelligence | Architecture Blueprint
+Page 6
+Design principles
+Separate online request operations from heavier batch analytics; validate data at ingestion; version rules and models;
+treat predictions as advisory; use stable identifiers; make all derived metrics reproducible; and keep the prototype
+deployable without an external generative AI dependency.
+7. Component architecture
+Frontend
+Suggested structure: app/(manager)/requests/new, app/(manager)/requests/[id], app/(hr)/queue, app/(hr)/analytics,
+app/(owner)/process-insights, app/predictions and app/audit. Reusable components include StatusBadge,
+WorkflowTimeline, ValidationSummary, RiskCard, EvidencePanel, MetricCard, FilterBar and RecommendationCard. Use
+accessible contrast, clear error text, loading states and empty states.
+Backend services
+RequestService: creates and retrieves request records. ValidationService: executes versioned rules.
+WorkflowService: manages state transitions and timeline events. PredictionService: loads a pinned model and creates
+explanations. AnalyticsService: reads precomputed aggregates and computes supported summaries.
+RecommendationService: converts measured issues into recommendations. AuditService: writes append-only audit
+events. Each service should have a small, testable interface.
+Batch jobs
+Ingestion job: validates incoming files and records row-level errors. Feature job: builds features using only information
+available at prediction time. Training job: compares baseline and candidate models. Evaluation job: computes metrics
+and calibration. Process job: derives stage durations, path frequencies and loops. Export job: creates the required test
+prediction file and evidence report.
+8. Data architecture and data contracts
+Source files
+p2p_event_log.csv should be treated as an event table; requests.csv as the submitted form table; process_map.md
+as the source of workflow stages and target times; validation_rules.md as the source of validation requirements; and
+org_positions.csv as a synthetic organisational reference table. Confirm exact column names before coding.
+Canonical entities
+Request: request_id, request_type, submitted_at, submitter_role, request_payload, initial_validation_status. Event:
+event_id, request_id, step, actor_role, team, event_timestamp, outcome, return_reason. Position: position_id, grade,
+department, reporting_position_id, active_flag if supplied. Rule: rule_id, request_type, field_or_condition, severity,
+message, rule_version. Prediction: prediction_id, request_id, target, score, risk_band, model_version, generated_at,
+explanation_payload.
+Data quality controls
+Check duplicate IDs, missing keys, invalid timestamps, events preceding submission, inconsistent outcomes,
+unrecognised request types, impossible state transitions and orphaned references. Preserve original source files as
+immutable inputs. Record data preparation version and rejected-row counts. Do not silently coerce invalid data into
+apparently valid values.
+
+=== PAGE 7 ===
+Emirates P2P Intelligence | Architecture Blueprint
+Page 7
+Data leakage controls
+Do not use final outcome, future event timestamps, future return reasons or post-resolution actions as predictors for an
+in-flight request. Compute features at a defined prediction cutoff. For model evaluation, split by time or request group and
+avoid putting events from the same request into both training and test partitions. Document label windows and how
+unresolved requests are treated.
+9. Submission validation engine
+Rule execution
+Represent each rule with an identifier, request-type scope, predicate, severity, user-facing message and correction hint.
+Rules should be deterministic and unit-tested. For example: required-field checks; reference existence checks;
+allowed-value checks; grade or department compatibility only when explicitly specified; prerequisite transaction checks;
+and approval-route checks based on the process map.
+Validation response contract
+Return a list of findings containing rule_id, severity, field_name, message, correction_hint and evidence. Use severity
+values such as error, warning and information. Errors block submission when the supplied rule requires it. Warnings
+explain potential issues without automatically blocking the request unless the specification says otherwise.
+Example response
+{
+  "valid": false,
+  "findings": [
+   {"rule_id":"P2P-REQ-001","severity":"error","field_name":"destination_position_id","message":"Select a destination
+position.","correction_hint":"Choose a valid position from the available synthetic positions."}
+  ]
+}
+Rules governance
+Keep rule definitions versioned and traceable to the provided rules document. A process owner can review changes, but
+the prototype should not provide a self-service policy editor unless there is time to implement approval and audit controls.
+Record the rule version used for every validation result.
+10. Workflow state and status tracking
+State model
+A simple state model might include Draft, Submitted, In Review, Awaiting Approval, Awaiting Prerequisite, Processing,
+Returned, Completed and Cancelled. These are illustrative labels only: map the actual states to the organiser's process
+map and event outcomes. Do not invent production states and present them as official Emirates terminology.
+Transitions
+Each transition should define the prior state, event that triggers the transition, authorised role, resulting state and required
+audit fields. Reject illegal transitions at the backend. A return should require a recorded reason where the data or process
+requires one. Completed requests should not be reopened without an explicit, auditable transition.
+
+=== PAGE 8 ===
+Emirates P2P Intelligence | Architecture Blueprint
+Page 8
+Elapsed-time calculations
+Calculate total elapsed time from submission to completion for completed requests. For in-flight requests, calculate
+elapsed time from submission to the prediction cutoff. Stage time begins at the event that enters the stage and ends at
+the event that exits it. Handle missing exit events as right-censored observations rather than treating them as zero
+duration.
+Status freshness
+In the challenge prototype, the source may be static. Label the data timestamp and explain that status reflects the loaded
+synthetic event log or simulated actions. In a future integration, events would be updated through approved interfaces or
+scheduled ingestion, with freshness indicators and retry handling.
+11. Predictive analytics and responsible ML
+Prediction targets
+Create separate, precisely defined labels. Return risk may mean a request is returned for correction within a specified
+observation window. Delay risk may mean a request exceeds a documented target time. If the challenge defines labels
+differently, follow its definition. Keep target labels separate so the model does not conflate a return with a delay.
+Feature design
+Potential features include request type, submission hour/day where appropriate, completeness indicators, validation
+findings, current stage, elapsed time in current stage, previous returns before the prediction cutoff, number of completed
+stages, observed route and historical aggregate stage duration. Exclude protected or irrelevant personal characteristics
+and any fields not justified for process-risk prediction.
+Model development
+Start with a simple baseline such as predicting the historical class prevalence or using a transparent logistic regression.
+Compare against random forest or gradient boosting only if data size and quality support them. Use stratified or
+time-aware validation as appropriate. Tune thresholds to the operational cost of false positives and false negatives, not
+solely to maximise accuracy.
+Evaluation
+Report precision, recall, F1, PR-AUC, ROC-AUC where useful, Brier score or calibration curves, confusion matrix and
+performance by request type. When data is imbalanced, accuracy alone can be misleading. Compare against a simple
+baseline. Use a holdout that approximates the actual test-set scenario.
+Explainability
+Display the top contributing factors using SHAP or model-specific explanations where technically appropriate. For a
+rule-based risk indicator, display the exact condition that triggered it. Explanations are associations or model attributions,
+not proof of causation. Phrase them as 'factors contributing to this model estimate' rather than definitive reasons.
+Human oversight
+A high-risk score should prompt review, not automatically escalate, reject, prioritise or change a request. Allow authorised
+users to record a decision and reason. Monitor false positives that create unnecessary work and false negatives that miss
+stalled requests. Store model version and prediction time so results can be reproduced.
+
+=== PAGE 9 ===
+Emirates P2P Intelligence | Architecture Blueprint
+Page 9
+12. Process mining and bottleneck discovery
+Event-log preparation
+Sort events by request_id and timestamp, normalise event labels and check for duplicate or out-of-order records.
+Reconstruct each request's path as an ordered sequence of stages and outcomes. Compare observed paths to the
+documented process map, while preserving legitimate exceptions.
+Core analyses
+Stage duration distribution; end-to-end duration distribution; most frequent paths; return-loop counts; rework cycles per
+request; target-time breaches; stage-to-stage transition counts; requests with missing or unexpected events; and
+team-level variation where comparisons are fair and sufficiently populated.
+Loop detection
+Identify patterns such as a request moving from review to return and then back to review, or repeatedly entering the same
+validation stage. Count loops per request and calculate their associated elapsed time. Do not label every repeated stage
+as waste; some loops may be legitimate policy controls.
+Bottleneck definition
+A bottleneck is a stage or transition that materially contributes to waiting or rework. Rank candidates by a combination of
+total waiting time, median and tail duration, volume affected, breach rate and repeat-loop frequency. A stage with a long
+average but very low volume may have less aggregate impact than a moderate delay affecting many requests.
+Evidence panel
+Every insight should show its date range, sample size, metric definition, filtering criteria and source event fields. Where a
+sample is small, label the result as low-confidence and avoid ranking teams in a way that invites unsupported
+performance conclusions.
+13. Recommendation and savings engine
+Recommendation structure
+Each recommendation should contain: problem statement; supporting evidence; affected request types and stages;
+proposed process or UI change; estimated benefit; calculation method; implementation effort; dependencies; risks; and a
+measurement plan. Recommendations should be specific enough that a process owner can decide whether to pilot them.
+Savings formula
+Estimated hours saved per month = monthly requests affected × avoidable minutes saved per request ÷ 60. For a
+return-reduction scenario, estimate avoided return cycles × average handling minutes per cycle ÷ 60. Keep direct
+handling time separate from elapsed waiting time: a reduction in elapsed time is not necessarily an equivalent number of
+labour hours saved.
+Scenario assumptions
+If monthly volume is not supplied, show a parameterised calculator rather than a precise total. Provide conservative, base
+and optimistic scenarios only when the assumptions are explicit. State that estimated benefits are hypotheses until
+confirmed in a controlled pilot.
+
+=== PAGE 10 ===
+Emirates P2P Intelligence | Architecture Blueprint
+Page 10
+Prioritisation
+Rank recommendations by expected impact, evidence strength, implementation effort, risk and reversibility. A small
+form-validation improvement supported by frequent historical errors may be a better first pilot than a major workflow
+redesign based on a small sample.
+14. API design
+API conventions
+Use versioned REST endpoints, JSON payloads, predictable status codes, request IDs and validation errors. Document
+endpoints with FastAPI's generated OpenAPI documentation. Validate all inputs with typed schemas and reject
+malformed payloads.
+Suggested endpoints
+POST /api/v1/requests — create a draft or submit a request; GET /api/v1/requests/{id} — retrieve request details; POST
+/api/v1/requests/{id}/validate — run validation; POST /api/v1/requests/{id}/submit — submit after server checks; GET
+/api/v1/requests/{id}/timeline — retrieve events; GET /api/v1/hr/queue — retrieve filtered queue; GET
+/api/v1/analytics/overview — dashboard aggregates; GET /api/v1/analytics/bottlenecks — stage insights; POST
+/api/v1/predictions/run — run approved inference; GET /api/v1/predictions/{id} — retrieve prediction and evidence; GET
+/api/v1/audit — retrieve permitted audit records.
+Operational safeguards
+Use pagination for queue endpoints, filter inputs through allowlists, apply role checks server-side and avoid returning raw
+exception traces to clients. Use idempotency keys for submission operations if repeated clicks could create duplicates.
+Prediction endpoints should not mutate request state.
+15. User experience and dashboard design
+Interaction principles
+Make the next action obvious; show errors next to relevant fields and in a summary; preserve form values after validation
+failures; use plain language; distinguish warnings from blocking errors; show data freshness; and ensure the interface
+works on common desktop widths and smaller screens.
+Manager screens
+The manager home page should show draft, submitted, returned and completed requests. The request form should guide
+the user in short steps. The request detail view should prioritise status, owner, next action, elapsed time and history.
+Avoid exposing internal model details that do not help a manager act.
+HR screens
+The HR queue should support filters for stage, status, age, request type and risk. A row should include the request
+reference, stage, age, next owner, risk band and next action. Clicking a row opens the event timeline and evidence.
+Include an 'unassigned/unknown owner' view so missing ownership is visible rather than hidden.
+Process owner screens
+Use metric cards for volume and target-time performance; a stage-duration chart; return-reason distribution;
+workflow-path or loop table; and ranked recommendations. Avoid decorative visualisations that do not answer an
+operational question. Each chart needs a clear definition and date range.
+
+=== PAGE 11 ===
+Emirates P2P Intelligence | Architecture Blueprint
+Page 11
+Accessibility and localisation
+Use keyboard navigation, labels for form fields, accessible colour contrast, visible focus states and text in addition to
+colour for risk levels. English is the baseline. Arabic support is a nice-to-have and should include right-to-left layout
+testing, not merely translated labels.
+16. Security, privacy and governance
+Prototype data handling
+Use synthetic data only. Keep input data within the approved development environment. Do not upload the challenge
+pack to services that retain or train on it. Do not include real employee records, credentials or production endpoints in
+code or screenshots.
+Identity and authorisation
+For the prototype, demonstrate role separation with safe sample accounts or a documented mock-role switch. In
+production, integrate with Emirates-approved identity and access management. Enforce least privilege at the API layer;
+hiding a button in the UI is not authorisation.
+Audit design
+Capture actor or service identity, timestamp, action, object ID, previous and new state where relevant, rule/model version,
+and a correlation ID. Protect audit logs against ordinary user modification. Avoid recording full payloads when a minimal
+change summary is sufficient.
+AI governance
+Document intended use, prohibited use, target labels, training-data limitations, evaluation results, known failure modes
+and human review procedures. The model must not decide employment outcomes. Do not present a prediction
+explanation as a causal finding.
+Deployment security
+Use TLS in transit, encrypted storage where supported, secrets management, dependency scanning, restricted network
+access, backups and retention rules. Any production pilot requires security, privacy, HR policy and architecture approval
+from the relevant Emirates owners.
+17. Observability, testing and quality
+Logging and monitoring
+Log request correlation IDs, endpoint latency, validation-rule failures, model version, inference latency and batch-job
+outcomes. Avoid logging sensitive form payloads. Dashboard data should expose ingestion timestamp and pipeline
+version.
+Testing pyramid
+Unit tests for individual validation rules and feature functions; integration tests for API/database behaviour; contract tests
+for input schemas; end-to-end tests for manager submission and tracking; model tests for leakage and reproducibility;
+and security tests for role access and malformed requests.
+
+=== PAGE 12 ===
+Emirates P2P Intelligence | Architecture Blueprint
+Page 12
+Acceptance tests
+An invalid request is blocked when a blocking rule fails and displays an actionable message. A valid request can be
+submitted and receives a unique reference. Status details show the correct event sequence. Predictions do not alter
+workflow state. Each risk result includes a model version and evidence. Process metrics reconcile to the source event
+counts. Exports match the required organiser schema.
+Quality gates
+Do not ship if source files fail schema validation without a visible error; if the model uses future information; if users can
+bypass server-side rules; if unauthorised roles can access restricted data; or if recommendations contain unlabelled
+invented savings. Document any incomplete feature in the demo and solution note.
+18. Deployment architecture
+Challenge prototype
+Run the frontend and FastAPI backend locally or in an approved sandbox. Use SQLite for the fastest demo path, with a
+migration path to PostgreSQL. Keep synthetic input files in a controlled local data directory and mount them read-only
+where possible. Package dependencies and startup commands so judges can reproduce the environment.
+Future internal deployment
+A production design could place the frontend behind an approved enterprise ingress, route API traffic to a private
+application service, store transactional data in an approved managed relational database, run analytics jobs in a
+controlled batch environment and store model artefacts in a versioned internal repository. Identity, monitoring, backups,
+secrets and networking must follow Emirates standards.
+Environment separation
+Use separate development, test and production environments. Synthetic data belongs in development and test.
+Promotion to production requires security review, data approval, performance testing, user acceptance, model
+governance sign-off and an explicit integration contract. No live HR connection is part of this prototype.
+Operational resilience
+Provide health checks, startup validation, database backup/restore instructions, model-load failure handling and graceful
+degradation. If the prediction model is unavailable, form validation and status tracking should continue; the interface
+should show that risk prediction is temporarily unavailable rather than inventing a score.
+19. Implementation roadmap
+Phase 1 — inspect and model data
+Confirm actual CSV columns, identifiers, request types, outcome definitions and rule text. Build a data dictionary, schema
+validation and data-quality report. Deliverable: reproducible ingestion script and verified sample records.
+Phase 2 — core workflow
+Implement the guided form, validation engine, request IDs, simulated submission and request timeline. Deliverable:
+end-to-end manager journey with unit tests for rules.
+Phase 3 — process intelligence
+Reconstruct event paths and compute duration, return and loop metrics. Build the first HR dashboard with drill-down
+evidence. Deliverable: data-backed bottleneck findings.
+
+=== PAGE 13 ===
+Emirates P2P Intelligence | Architecture Blueprint
+Page 13
+Phase 4 — prediction
+Define targets, build a baseline, evaluate candidate models, test for leakage, generate explanations and implement
+test-set export. Deliverable: reproducible model report and prediction pipeline.
+Phase 5 — recommendations and polish
+Add the savings calculator, recommendation evidence cards, audit trail, role-based demo mode and empty/error states.
+Deliverable: complete prototype aligned to judging criteria.
+Phase 6 — submission readiness
+Run tests, freeze the model and rules versions, prepare setup instructions, record the demo, generate predictions using
+the released test set and write the two-page solution note. Deliverable: a reproducible submission package.
+20. Evaluation plan and judging alignment
+Error detection and prediction accuracy — 30%
+Demonstrate each supplied validation rule with passing and failing examples. Report the number and type of errors
+caught. Evaluate return and delay models separately, compare against baselines and use the held-out set without tuning
+on its labels.
+Process insight — 25%
+Present the top bottlenecks with counts, stage duration, loop or return evidence and a transparent calculation. Show at
+least one recommendation tied directly to a measured pattern. Include sample sizes and definitions.
+Manager and HR experience — 15%
+Complete a manager submission in under a minute during the demo where feasible. Show the error-correction flow,
+unique request reference, timeline, current owner and next action. Show the HR queue and a drill-down.
+Responsible AI and security — 15%
+Show that risk outputs are advisory, approvals remain human, synthetic data is used, roles are separated and actions are
+auditable. Explain the model's limitations and what happens if the model fails.
+Deployability and reuse — 15%
+Provide a clean repository, pinned dependencies, Docker or clear setup commands, sample configuration, test
+instructions, API documentation and an internal deployment diagram. Keep business rules configurable and documented
+so other entities could adapt them.
+21. Three-minute demo plan
+0:00–0:20 — problem and promise
+State the problem in one sentence: incomplete requests, unclear ownership and invisible bottlenecks create avoidable
+rework. Introduce the four capabilities: validate, track, predict and improve.
+0:20–0:50 — SmartCheck
+Open an intentionally invalid synthetic request. Submit or validate it, show the exact failed rules and corrections, then fix
+the fields and resubmit. Explain that server-side checks enforce the same rules.
+
+=== PAGE 14 ===
+Emirates P2P Intelligence | Architecture Blueprint
+Page 14
+0:50–1:15 — FlowTrack
+Open the request details. Point to the current stage, next owner, elapsed time and workflow history. State clearly that this
+is synthetic/simulated status, not a live HR connection.
+1:15–1:45 — DelayPredict
+Open an in-flight request and show delay and return risk, top factors, model version and suggested human action.
+Explain that the score supports review and does not approve or reject the request.
+1:45–2:20 — ProcessLens
+Show the stage-duration and return-loop findings. Select one bottleneck and reveal the event counts and calculation that
+support it.
+2:20–2:45 — Improvement Engine
+Show a recommendation with affected volume, assumed avoidable minutes, estimated hours saved and implementation
+effort. Explicitly label estimates as scenario-based until validated.
+2:45–3:00 — trust and close
+Reinforce synthetic data, human approvals, audit trail and internal deployment readiness. Close with the three outcomes:
+fewer avoidable returns, clearer ownership and evidence-based process improvement.
+22. Risks and mitigations
+Risk: inaccurate policy assumptions
+Mitigation: implement only rules from the supplied rule document and process map; maintain rule IDs and tests; mark
+unresolved rules as requiring HR confirmation.
+Risk: data leakage in prediction
+Mitigation: establish a prediction cutoff, exclude future events and final outcomes, split by time/request and audit feature
+lineage.
+Risk: misleading risk scores
+Mitigation: compare with baselines, report calibration and class imbalance, display uncertainty and evidence, and keep
+predictions advisory.
+Risk: fake or inflated savings
+Mitigation: publish formulas, assumptions and affected counts; distinguish labour time from elapsed time; validate
+through a pilot.
+Risk: dashboard metrics do not reconcile
+Mitigation: document denominators, date windows and handling of in-flight requests; add reconciliation tests against
+source data.
+Risk: overbuilt scope
+Mitigation: prioritise validation, tracking and event-log insights first; treat chatbot and Arabic support as optional once the
+core flow works.
+
+=== PAGE 15 ===
+Emirates P2P Intelligence | Architecture Blueprint
+Page 15
+Risk: data exposure
+Mitigation: synthetic data only, no unapproved external services, minimal logs, role checks and secure packaging.
+23. Solution note draft
+Problem and solution
+Emirates P2P Intelligence is a synthetic-data prototype designed to reduce avoidable P2P rework and improve workflow
+visibility. It validates requests against supplied rules before submission, tracks request events and ownership, predicts
+potential returns or target-time breaches, and analyses workflow histories to identify bottlenecks and improvement
+opportunities.
+Technical approach
+The proposed implementation uses a Next.js/React frontend, a FastAPI service layer, Python data processing,
+scikit-learn models and a relational store. Deterministic rules handle known policy checks; predictive models estimate
+delay and return risk; process analytics reconstruct paths and quantify stage waits and loops. Every prediction and
+recommendation includes supporting evidence and version information.
+Responsible AI
+The prototype uses synthetic data only and does not connect to live HR systems. It does not approve, reject or make
+employment decisions. Human users remain responsible for decisions. Predictions are advisory, are evaluated against
+held-out data, and include limitations and supporting factors. Production use would require privacy, security, HR policy
+and model governance approval.
+Deployment and evaluation
+The application is designed to run locally or in an approved sandbox and can be containerised. A future internal
+deployment would use Emirates-approved identity, networking, storage, logging and monitoring. Evaluation will measure
+validation errors caught, held-out delay/return prediction performance, workflow insight quality, usability, security controls
+and reproducibility. Savings estimates will be tied to measured volumes and explicit assumptions.
+
+=== PAGE 16 ===
+Emirates P2P Intelligence | Architecture Blueprint
+Page 16
+24. Appendix: sample schemas and acceptance criteria
+A. Suggested database tables
+Table
+Core fields
+Purpose
+requests
+request_id, request_type, submitted_at, current_state,
+payload_json, created_by_role
+Canonical request record; keep
+synthetic payload minimal.
+workflow_events
+event_id, request_id, stage, actor_role, team, timestamp,
+outcome, reason_code
+Append-only event history and
+process analytics.
+validation_runs
+run_id, request_id, rule_version, checked_at, result,
+findings_json
+Reproduce submission checks and
+explain failures.
+predictions
+prediction_id, request_id, target, score, risk_band,
+model_version, generated_at, explanation_json
+Track advisory model outputs.
+audit_events
+audit_id, actor, action, object_type, object_id, timestamp,
+correlation_id, details_json
+Evidence of actions and state
+changes.
+model_registry
+model_version, target, trained_at, feature_version,
+evaluation_summary, artifact_path
+Trace model artefacts and evaluation.
+rule_registry
+rule_id, version, request_type, severity, description, enabled
+Versioned validation rule catalogue.
+B. Example acceptance criteria
+ID
+Given / when
+Expected result
+AC-01
+A required field is missing and the manager validates
+the form.
+The server returns a blocking finding with rule ID, field and
+correction hint.
+AC-02
+The form passes all blocking rules.
+The request can be submitted and receives one unique
+request ID.
+AC-03
+A manager opens a submitted request.
+The screen shows stage, elapsed time, next action and
+recorded history.
+AC-04
+The prediction service generates a score.
+The result includes target, model version, timestamp and
+evidence; workflow state remains unchanged.
+AC-05
+A process insight is shown.
+It includes metric definition, sample size, date window and
+source evidence.
+AC-06
+An unauthorised role calls a restricted endpoint.
+The API denies access even if the UI is bypassed.
+AC-07
+The model file cannot be loaded.
+The UI indicates prediction unavailable; validation and
+tracking remain functional.
+AC-08
+The test-set prediction export is generated.
+Output IDs and columns match the organiser's required
+schema, with no extra personal data.
+
+=== PAGE 17 ===
+Emirates P2P Intelligence | Architecture Blueprint
+Page 17
+C. Repository layout
+emirates-p2p-intelligence/
+■■■ frontend/   # Next.js pages, components and API client
+■■■ backend/
+■   ■■■ app/api/   # versioned routes
+■   ■■■ app/services/   # request, validation, workflow, prediction, analytics
+■   ■■■ app/models/   # typed schemas and database models
+■   ■■■ app/rules/   # versioned validation rules
+■   ■■■ tests/   # unit and integration tests
+■■■ data/   # controlled synthetic inputs; never commit restricted files without permission
+■■■ notebooks/   # exploratory analysis only
+■■■ pipelines/   # ingestion, features, training, evaluation, process metrics
+■■■ models/   # versioned model artefacts or local-only storage
+■■■ reports/   # metrics, findings and prediction exports
+■■■ docs/   # architecture, data dictionary, setup, solution note
+■■■ docker-compose.yml
+■■■ .env.example
+■■■ README.md
+D. Submission checklist
+●
+Runnable prototype with setup instructions and a reproducible environment.
+●
+Validation rules mapped to the supplied rule document and covered by tests.
+●
+Manager request form, tracking timeline and HR queue.
+●
+Process analytics based on actual event-log data.
+●
+Delay and return predictions evaluated against a leakage-safe holdout.
+●
+Test-set output generated using the organiser's exact requested schema.
+●
+Recommendations include evidence, formulas, assumptions and implementation effort.
+●
+Responsible-AI and security statement included in the solution note.
+●
+Three-minute demo video recorded with synthetic examples.
+●
+Known limitations disclosed honestly; no claims of live Emirates integration.
+End of architecture blueprint
+This blueprint is a design proposal, not an official Emirates architecture or policy document. Confirm all
+business rules, terminology, data definitions and production controls with the challenge organisers and
+authorised stakeholders.

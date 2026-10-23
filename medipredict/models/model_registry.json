@@ -1,0 +1,66 @@
+{
+  "models": [
+    {
+      "model_id": "MOD-DIAB-01",
+      "name": "Type 2 Diabetes 5-Year Risk Classifier",
+      "algorithm": "GradientBoostingClassifier",
+      "version": "1.2.0",
+      "status": "Experimental Research Only",
+      "features": [
+        "age",
+        "bmi",
+        "glucose_fasting",
+        "hba1c",
+        "systolic_bp",
+        "family_history_score",
+        "physical_activity_hours"
+      ],
+      "metrics": {
+        "roc_auc": 0.852,
+        "f1": 0.561,
+        "accuracy": 0.85
+      },
+      "feature_importances": {
+        "age": 0.067,
+        "bmi": 0.124,
+        "glucose_fasting": 0.238,
+        "hba1c": 0.46,
+        "systolic_bp": 0.03,
+        "family_history_score": 0.041,
+        "physical_activity_hours": 0.041
+      },
+      "limitations": "Calibrated on synthetic population cohort. Not FDA/CE cleared for standalone clinical diagnostic decisions."
+    },
+    {
+      "model_id": "MOD-CVD-01",
+      "name": "Atherosclerotic CVD 10-Year Risk Estimator",
+      "algorithm": "RandomForestClassifier",
+      "version": "1.1.4",
+      "status": "Experimental Research Only",
+      "features": [
+        "age",
+        "total_cholesterol",
+        "hdl_cholesterol",
+        "systolic_bp",
+        "smoker",
+        "diabetes",
+        "egfr"
+      ],
+      "metrics": {
+        "roc_auc": 0.746,
+        "f1": 0.27,
+        "accuracy": 0.794
+      },
+      "feature_importances": {
+        "age": 0.33,
+        "total_cholesterol": 0.17,
+        "hdl_cholesterol": 0.141,
+        "systolic_bp": 0.157,
+        "smoker": 0.023,
+        "diabetes": 0.04,
+        "egfr": 0.138
+      },
+      "limitations": "Derived from simulated Framingham/SCORE2-like risk variables. Requires physician correlation."
+    }
+  ]
+}

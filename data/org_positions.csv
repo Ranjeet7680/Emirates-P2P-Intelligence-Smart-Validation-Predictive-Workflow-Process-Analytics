@@ -1,0 +1,98 @@
+position_id,job_title,grade,department,cost_center,reporting_position_id,fte_capacity,current_fte_filled,active_flag,is_safety_critical
+POS-FLT-1000,Captain B777,EK-11,Flight Operations,CC-100401,POS-FLT-MGR-01,1.0,1.0,True,True
+POS-FLT-1001,Captain B777,EK-11,Flight Operations,CC-100401,POS-FLT-MGR-01,1.0,1.0,True,True
+POS-FLT-1002,Captain B777,EK-11,Flight Operations,CC-100401,POS-FLT-MGR-01,1.0,1.0,True,True
+POS-FLT-1003,Captain B777,EK-11,Flight Operations,CC-100401,POS-FLT-MGR-01,1.0,1.0,True,True
+POS-FLT-1004,First Officer A380,EK-09,Flight Operations,CC-100401,POS-FLT-MGR-01,1.0,1.0,True,True
+POS-FLT-1005,First Officer A380,EK-09,Flight Operations,CC-100401,POS-FLT-MGR-01,1.0,1.0,True,True
+POS-FLT-1006,Fleet Technical Pilot,EK-10,Flight Operations,CC-100401,POS-FLT-MGR-01,1.0,0.0,True,True
+POS-FLT-1007,Fleet Technical Pilot,EK-10,Flight Operations,CC-100401,POS-FLT-MGR-01,1.0,1.0,True,True
+POS-FLT-1008,Flight Dispatch Specialist,EK-07,Flight Operations,CC-100401,POS-FLT-MGR-01,1.0,0.0,True,True
+POS-FLT-1009,Flight Dispatch Specialist,EK-07,Flight Operations,CC-100401,POS-FLT-MGR-01,1.0,0.0,True,True
+POS-FLT-1010,Flight Dispatch Specialist,EK-07,Flight Operations,CC-100401,POS-FLT-MGR-01,1.0,1.0,True,True
+POS-FLT-1011,Crew Operations Controller,EK-06,Flight Operations,CC-100401,POS-FLT-MGR-01,1.0,1.0,True,True
+POS-FLT-1012,Crew Operations Controller,EK-06,Flight Operations,CC-100401,POS-FLT-MGR-01,1.0,1.0,True,True
+POS-FLT-1013,Crew Operations Controller,EK-06,Flight Operations,CC-100401,POS-FLT-MGR-01,1.0,1.0,True,True
+POS-FLT-1014,Flight Ops Duty Manager,EK-09,Flight Operations,CC-100401,POS-FLT-MGR-01,1.0,1.0,False,True
+POS-FLT-1015,Flight Ops Duty Manager,EK-09,Flight Operations,CC-100401,POS-FLT-MGR-01,1.0,1.0,True,True
+POS-FLT-1016,Flight Ops Duty Manager,EK-09,Flight Operations,CC-100401,POS-FLT-MGR-01,1.0,0.0,True,True
+POS-IFS-1017,Cabin Service Director,EK-08,In-flight Services,CC-100402,POS-IFS-MGR-01,1.0,1.0,True,True
+POS-IFS-1018,Cabin Service Director,EK-08,In-flight Services,CC-100402,POS-IFS-MGR-01,1.0,1.0,True,True
+POS-IFS-1019,Cabin Service Director,EK-08,In-flight Services,CC-100402,POS-IFS-MGR-01,1.0,1.0,True,True
+POS-IFS-1020,Purser B777/A380,EK-07,In-flight Services,CC-100402,POS-IFS-MGR-01,1.0,0.0,True,True
+POS-IFS-1021,Purser B777/A380,EK-07,In-flight Services,CC-100402,POS-IFS-MGR-01,1.0,1.0,True,True
+POS-IFS-1022,Senior Flight Steward,EK-06,In-flight Services,CC-100402,POS-IFS-MGR-01,1.0,1.0,True,True
+POS-IFS-1023,Senior Flight Steward,EK-06,In-flight Services,CC-100402,POS-IFS-MGR-01,1.0,1.0,True,True
+POS-IFS-1024,Cabin Crew Line Trainer,EK-07,In-flight Services,CC-100402,POS-IFS-MGR-01,1.0,1.0,True,True
+POS-IFS-1025,Cabin Crew Line Trainer,EK-07,In-flight Services,CC-100402,POS-IFS-MGR-01,1.0,1.0,True,True
+POS-IFS-1026,Cabin Crew Line Trainer,EK-07,In-flight Services,CC-100402,POS-IFS-MGR-01,1.0,1.0,True,True
+POS-IFS-1027,Cabin Crew Line Trainer,EK-07,In-flight Services,CC-100402,POS-IFS-MGR-01,1.0,0.0,True,True
+POS-IFS-1028,In-flight Catering Specialist,EK-05,In-flight Services,CC-100402,POS-IFS-MGR-01,1.0,0.0,True,True
+POS-IFS-1029,In-flight Catering Specialist,EK-05,In-flight Services,CC-100402,POS-IFS-MGR-01,1.0,0.0,True,True
+POS-ENG-1030,Licensed Aircraft Engineer - Avionics,EK-08,Engineering & Maintenance,CC-100403,POS-ENG-MGR-01,1.0,0.0,True,True
+POS-ENG-1031,Licensed Aircraft Engineer - Avionics,EK-08,Engineering & Maintenance,CC-100403,POS-ENG-MGR-01,1.0,1.0,True,True
+POS-ENG-1032,Airframe Maintenance Specialist,EK-07,Engineering & Maintenance,CC-100403,POS-ENG-MGR-01,1.0,0.0,True,True
+POS-ENG-1033,Airframe Maintenance Specialist,EK-07,Engineering & Maintenance,CC-100403,POS-ENG-MGR-01,1.0,0.0,True,True
+POS-ENG-1034,Airframe Maintenance Specialist,EK-07,Engineering & Maintenance,CC-100403,POS-ENG-MGR-01,1.0,0.0,True,True
+POS-ENG-1035,Airframe Maintenance Specialist,EK-07,Engineering & Maintenance,CC-100403,POS-ENG-MGR-01,1.0,1.0,True,True
+POS-ENG-1036,Base Maintenance Superintendent,EK-10,Engineering & Maintenance,CC-100403,POS-ENG-MGR-01,1.0,1.0,True,True
+POS-ENG-1037,Base Maintenance Superintendent,EK-10,Engineering & Maintenance,CC-100403,POS-ENG-MGR-01,1.0,1.0,True,True
+POS-ENG-1038,Base Maintenance Superintendent,EK-10,Engineering & Maintenance,CC-100403,POS-ENG-MGR-01,1.0,1.0,False,True
+POS-ENG-1039,Base Maintenance Superintendent,EK-10,Engineering & Maintenance,CC-100403,POS-ENG-MGR-01,1.0,1.0,True,True
+POS-ENG-1040,Aviation Quality Assurance Auditor,EK-08,Engineering & Maintenance,CC-100403,POS-ENG-MGR-01,1.0,0.0,True,True
+POS-ENG-1041,Aviation Quality Assurance Auditor,EK-08,Engineering & Maintenance,CC-100403,POS-ENG-MGR-01,1.0,1.0,True,True
+POS-ENG-1042,Engineering Technical Records Officer,EK-05,Engineering & Maintenance,CC-100403,POS-ENG-MGR-01,1.0,1.0,True,True
+POS-ENG-1043,Engineering Technical Records Officer,EK-05,Engineering & Maintenance,CC-100403,POS-ENG-MGR-01,1.0,0.0,True,True
+POS-ENG-1044,Engineering Technical Records Officer,EK-05,Engineering & Maintenance,CC-100403,POS-ENG-MGR-01,1.0,0.0,True,True
+POS-ENG-1045,Engineering Technical Records Officer,EK-05,Engineering & Maintenance,CC-100403,POS-ENG-MGR-01,1.0,1.0,True,True
+POS-APO-1046,Terminal Duty Officer,EK-07,Airport Operations,CC-100404,POS-APO-MGR-01,1.0,0.0,True,True
+POS-APO-1047,Terminal Duty Officer,EK-07,Airport Operations,CC-100404,POS-APO-MGR-01,1.0,0.0,True,True
+POS-APO-1048,Terminal Duty Officer,EK-07,Airport Operations,CC-100404,POS-APO-MGR-01,1.0,1.0,True,True
+POS-APO-1049,Terminal Duty Officer,EK-07,Airport Operations,CC-100404,POS-APO-MGR-01,1.0,1.0,True,True
+POS-APO-1050,Ramp Safety Inspector,EK-06,Airport Operations,CC-100404,POS-APO-MGR-01,1.0,1.0,True,True
+POS-APO-1051,Ramp Safety Inspector,EK-06,Airport Operations,CC-100404,POS-APO-MGR-01,1.0,1.0,True,True
+POS-APO-1052,Ramp Safety Inspector,EK-06,Airport Operations,CC-100404,POS-APO-MGR-01,1.0,0.0,True,True
+POS-APO-1053,Ramp Safety Inspector,EK-06,Airport Operations,CC-100404,POS-APO-MGR-01,1.0,1.0,True,True
+POS-APO-1054,Baggage Operations Coordinator,EK-05,Airport Operations,CC-100404,POS-APO-MGR-01,1.0,1.0,True,True
+POS-APO-1055,Baggage Operations Coordinator,EK-05,Airport Operations,CC-100404,POS-APO-MGR-01,1.0,0.0,True,True
+POS-APO-1056,Hub Control Center Controller,EK-08,Airport Operations,CC-100404,POS-APO-MGR-01,1.0,1.0,True,True
+POS-APO-1057,Hub Control Center Controller,EK-08,Airport Operations,CC-100404,POS-APO-MGR-01,1.0,1.0,True,True
+POS-APO-1058,Passenger Service Lead,EK-06,Airport Operations,CC-100404,POS-APO-MGR-01,1.0,1.0,True,True
+POS-APO-1059,Passenger Service Lead,EK-06,Airport Operations,CC-100404,POS-APO-MGR-01,1.0,1.0,True,True
+POS-APO-1060,Passenger Service Lead,EK-06,Airport Operations,CC-100404,POS-APO-MGR-01,1.0,0.0,True,True
+POS-COM-1061,Route Revenue Analyst,EK-06,Commercial & Revenue,CC-100405,POS-COM-MGR-01,1.0,0.0,True,False
+POS-COM-1062,Route Revenue Analyst,EK-06,Commercial & Revenue,CC-100405,POS-COM-MGR-01,1.0,1.0,True,False
+POS-COM-1063,Route Revenue Analyst,EK-06,Commercial & Revenue,CC-100405,POS-COM-MGR-01,1.0,1.0,True,False
+POS-COM-1064,Route Revenue Analyst,EK-06,Commercial & Revenue,CC-100405,POS-COM-MGR-01,1.0,1.0,True,False
+POS-COM-1065,Senior Yield Optimization Manager,EK-10,Commercial & Revenue,CC-100405,POS-COM-MGR-01,1.0,0.0,True,False
+POS-COM-1066,Senior Yield Optimization Manager,EK-10,Commercial & Revenue,CC-100405,POS-COM-MGR-01,1.0,0.0,True,False
+POS-COM-1067,Senior Yield Optimization Manager,EK-10,Commercial & Revenue,CC-100405,POS-COM-MGR-01,1.0,0.0,True,False
+POS-COM-1068,Senior Yield Optimization Manager,EK-10,Commercial & Revenue,CC-100405,POS-COM-MGR-01,1.0,0.0,True,False
+POS-COM-1069,Commercial Pricing Specialist,EK-07,Commercial & Revenue,CC-100405,POS-COM-MGR-01,1.0,1.0,True,False
+POS-COM-1070,Commercial Pricing Specialist,EK-07,Commercial & Revenue,CC-100405,POS-COM-MGR-01,1.0,1.0,True,False
+POS-COM-1071,Regional Cargo Sales Executive,EK-07,Commercial & Revenue,CC-100405,POS-COM-MGR-01,1.0,1.0,True,False
+POS-COM-1072,Regional Cargo Sales Executive,EK-07,Commercial & Revenue,CC-100405,POS-COM-MGR-01,1.0,1.0,True,False
+POS-GIT-1073,Principal Solutions Architect,EK-11,Group IT,CC-100406,POS-GIT-MGR-01,1.0,0.0,True,False
+POS-GIT-1074,Principal Solutions Architect,EK-11,Group IT,CC-100406,POS-GIT-MGR-01,1.0,1.0,True,False
+POS-GIT-1075,Senior Full-Stack Engineer,EK-08,Group IT,CC-100406,POS-GIT-MGR-01,1.0,1.0,True,False
+POS-GIT-1076,Senior Full-Stack Engineer,EK-08,Group IT,CC-100406,POS-GIT-MGR-01,1.0,0.0,True,False
+POS-GIT-1077,Cybersecurity Operations Analyst,EK-07,Group IT,CC-100406,POS-GIT-MGR-01,1.0,0.0,True,False
+POS-GIT-1078,Cybersecurity Operations Analyst,EK-07,Group IT,CC-100406,POS-GIT-MGR-01,1.0,1.0,True,False
+POS-GIT-1079,Cloud Infrastructure Specialist,EK-08,Group IT,CC-100406,POS-GIT-MGR-01,1.0,1.0,True,False
+POS-GIT-1080,Cloud Infrastructure Specialist,EK-08,Group IT,CC-100406,POS-GIT-MGR-01,1.0,0.0,True,False
+POS-GIT-1081,Cloud Infrastructure Specialist,EK-08,Group IT,CC-100406,POS-GIT-MGR-01,1.0,0.0,True,False
+POS-GIT-1082,Data & AI Research Engineer,EK-09,Group IT,CC-100406,POS-GIT-MGR-01,1.0,1.0,True,False
+POS-GIT-1083,Data & AI Research Engineer,EK-09,Group IT,CC-100406,POS-GIT-MGR-01,1.0,0.0,True,False
+POS-GIT-1084,DevOps Automation Lead,EK-09,Group IT,CC-100406,POS-GIT-MGR-01,1.0,1.0,True,False
+POS-GIT-1085,DevOps Automation Lead,EK-09,Group IT,CC-100406,POS-GIT-MGR-01,1.0,1.0,True,False
+POS-HRG-1086,HR Business Partner - Operations,EK-08,Human Resources,CC-100407,POS-HRG-MGR-01,1.0,1.0,True,False
+POS-HRG-1087,HR Business Partner - Operations,EK-08,Human Resources,CC-100407,POS-HRG-MGR-01,1.0,1.0,True,False
+POS-HRG-1088,Talent Acquisition Specialist,EK-06,Human Resources,CC-100407,POS-HRG-MGR-01,1.0,0.0,False,False
+POS-HRG-1089,Talent Acquisition Specialist,EK-06,Human Resources,CC-100407,POS-HRG-MGR-01,1.0,0.0,True,False
+POS-HRG-1090,Talent Acquisition Specialist,EK-06,Human Resources,CC-100407,POS-HRG-MGR-01,1.0,1.0,True,False
+POS-HRG-1091,Talent Acquisition Specialist,EK-06,Human Resources,CC-100407,POS-HRG-MGR-01,1.0,1.0,True,False
+POS-HRG-1092,Employee Relations Specialist,EK-07,Human Resources,CC-100407,POS-HRG-MGR-01,1.0,1.0,True,False
+POS-HRG-1093,Employee Relations Specialist,EK-07,Human Resources,CC-100407,POS-HRG-MGR-01,1.0,1.0,True,False
+POS-HRG-1094,Process Mining & Analytics Lead,EK-09,Human Resources,CC-100407,POS-HRG-MGR-01,1.0,1.0,True,False
+POS-HRG-1095,Process Mining & Analytics Lead,EK-09,Human Resources,CC-100407,POS-HRG-MGR-01,1.0,0.0,True,False
+POS-HRG-1096,Process Mining & Analytics Lead,EK-09,Human Resources,CC-100407,POS-HRG-MGR-01,1.0,0.0,True,False
